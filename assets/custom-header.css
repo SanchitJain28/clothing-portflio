@@ -1,0 +1,630 @@
+.header__search {
+  display: flex !important;
+  width: 100%;
+  flex-grow: 1;
+  justify-self: stretch !important; 
+}
+
+.header--top-center {
+  grid-template-columns: auto 1fr auto !important; 
+}
+
+
+.custom-header-wrapper {
+  position: relative;
+  background: #ffffff;
+  z-index: 1000;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.custom-header {
+  display: block;
+  padding: 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* =========================================
+   TOP ROW: Search - Logo - Icons
+   ========================================= */
+.custom-top-row {
+  display: flex;
+  align-items: center;
+  padding: 5px 40px;
+  position: relative;
+  justify-content: space-between;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Search (Left) */
+.custom-search-area {
+  display: flex;
+  align-items: center;
+}
+
+.custom-search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.custom-search-icon {
+  width: 24px;
+  height: 24px;
+  color: #000;
+  cursor: pointer;
+}
+
+.custom-search-input {
+  border: none !important;
+  background: transparent !important;
+  width: 100%;
+  height: 100%;
+  padding: 0 36px 0 16px; 
+  font-size: 16px;
+  color: #1a1a1a;
+  outline: none !important;
+  
+  /* THIS FIXES THE WEIRD FLOATING EFFECT */
+  box-shadow: none !important; 
+  -webkit-appearance: none !important; 
+  appearance: none !important;
+  border-radius: 0 !important;
+  margin: 0;
+}
+
+/* Also ensure no shadow appears when the input is actively clicked/focused */
+.custom-search-input:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  background: transparent !important;
+}
+
+.custom-search-input::placeholder {
+  color: #64748b; 
+}
+/* Logo (Center) */
+.custom-logo-area {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 5;
+}
+
+.custom-logo-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.custom-logo-img {
+  display: block;
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+}
+
+.custom-logo-text {
+  font-weight: 700;
+  font-size: 2.6rem;
+  letter-spacing: .1em;
+  color: #000;
+  letter-spacing: -1px;
+}
+
+/* Icons (Right) */
+.custom-icons-area {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.custom-icon-btn {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.custom-icon-svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 1.5px;
+}
+
+.custom-cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #000;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+/* =========================================
+   NAVIGATION ROW (Links)
+   ========================================= */
+.custom-nav-row {
+  border-top: 1px solid #e5e5e5;
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.custom-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-menu-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  align-items: center;
+}
+
+.custom-menu-item {
+  position: relative;
+}
+
+.custom-menu-link {
+      display: block;
+    padding: 7px 20px;
+    text-decoration: none;
+    color: #211f1f;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color .2s;
+}
+
+.custom-menu-item:hover .custom-menu-link {
+  color: #000;
+}
+
+/* =========================================
+   COLLECTIONS ROW (Icons)
+   ========================================= */
+.custom-collections-grid {
+  border-top: 1px solid #e5e5e5;
+  padding: 20px 0;
+  background: #fff;
+}
+
+.custom-collections-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 40px;
+  
+  /* Flex Layout for Icons */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center icons */
+  gap: 40px; /* Space between icons */
+}
+
+.custom-collection-item {
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px; /* Defines the total width including text */
+  transition: transform 0.3s ease;
+}
+
+.custom-collection-item:hover {
+  transform: translateY(-5px);
+}
+
+.custom-collection-image-box {
+  /* FIXED ICON SIZE */
+  width: 100px;
+  height: 100px;
+  background: #f5f5f5;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+/* If you prefer rounded squares instead of circles, 
+   change border-radius above to 15px */
+
+.custom-collection-item:hover .custom-collection-image-box {
+  border-color: #e5e5e5;
+}
+
+.custom-collection-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.custom-collection-item:hover .custom-collection-img {
+  transform: scale(1.1);
+}
+
+.custom-collection-title {
+      font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    /* text-transform: capitalize; */
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   MOBILE / RESPONSIVE
+   ========================================= */
+.custom-mobile-trigger { 
+  display: none; 
+}
+
+@media screen and (max-width: 990px) {
+  .custom-top-row {
+    padding: 15px 20px;
+  }
+  
+  /* Hide standard Search and Menu Links */
+  .custom-search-area,
+  .custom-nav-row {
+    display: none;
+  }
+  
+  /* Show Hamburger */
+  .custom-mobile-trigger {
+    display: block;
+  }
+  
+  .custom-logo-area {
+    position: absolute; /* Keep absolute to center exactly */
+  }
+
+  /* --- Mobile Collections Scroll (Instagram Story Style) --- */
+  .custom-collections-grid {
+    display: block; /* Ensure it is visible */
+    padding: 15px 0;
+    border-top: none; /* Cleaner look on mobile */
+  }
+
+  .custom-collections-inner {
+    justify-content: flex-start; /* Align left for scrolling */
+    flex-wrap: nowrap; /* Prevent stacking */
+    overflow-x: auto; /* Enable Scroll */
+    padding: 0 20px; /* Left/Right padding */
+    gap: 15px; /* Closer gap on mobile */
+    
+    /* Smooth Scroll */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  /* Hide scrollbar for Chrome/Safari */
+  .custom-collections-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .custom-collection-item {
+    flex: 0 0 auto; /* Don't shrink */
+    width: 75px; /* Smaller width for mobile */
+  }
+
+  .custom-collection-image-box {
+    width: 80px; /* Smaller icon for mobile */
+    height: 80px;
+    margin-bottom: 6px;
+  }
+  
+  .custom-collection-title {
+    font-size: 1rem;
+    white-space: nowrap; /* Prevent text wrapping if desired, or remove to wrap */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .custom-top-row {
+    padding: 10px 15px;
+  }
+  
+  .custom-logo-img {
+    height: 24px;
+  }
+  
+  .custom-logo-text {
+    font-size: 2.2rem;
+  }
+}
+
+/* =========================================
+   CUSTOM SEARCH STYLING
+   ========================================= */
+
+.custom-search-container {
+  position: relative;
+  width: 100%;
+  max-width: 850px; /* Massively increased width */
+  flex-grow: 1; /* Tells the container to stretch in the header */
+  display: block;
+}
+
+.custom-search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px; 
+  width: 100%;
+}
+
+/* Outer Search Icon */
+.custom-search-btn-icon {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  flex-shrink: 0;
+}
+
+.custom-search-icon {
+  width: 28px;
+  height: 28px;
+  stroke-width: 2.5; 
+}
+
+/* Input Wrapper */
+.custom-search-input-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #cbd5e1; 
+  border-radius: 4px;
+  height: 44px;
+  transition: border-color 0.2s ease;
+  overflow: hidden; 
+}
+
+/* Blue focus border matching the image */
+.custom-search-input-wrapper:focus-within {
+  border-color: #3b82f6; 
+}
+
+/* The actual input field */
+.custom-search-input {
+  border: none !important;
+  background: transparent !important;
+  width: 100%;
+  height: 100%;
+  padding: 0 36px 0 16px; 
+  font-size: 16px;
+  color: #1a1a1a;
+  outline: none !important;
+  box-shadow: none !important; 
+  -webkit-appearance: none !important; 
+  appearance: none !important;
+  border-radius: 0 !important;
+  margin: 0;
+}
+
+/* Prevent native focus rings or shadows */
+.custom-search-input:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  background: transparent !important;
+}
+
+.custom-search-input::placeholder {
+  color: #64748b; 
+}
+
+/* HIDE NATIVE BROWSER 'X' TO PREVENT DOUBLE X's */
+.custom-search-input::-webkit-search-decoration,
+.custom-search-input::-webkit-search-cancel-button,
+.custom-search-input::-webkit-search-results-button,
+.custom-search-input::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+/* Reset/Clear Button (Blue X) */
+.custom-reset-button {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6; 
+  z-index: 2;
+}
+
+.custom-reset-button.hidden {
+  display: none;
+}
+
+/* =========================================
+   PREDICTIVE RESULTS DROPDOWN
+   ========================================= */
+
+.custom-predictive-results {
+  position: absolute;
+  top: calc(100% + 8px); 
+  left: 0;
+  width: 100%; 
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); /* Slightly softer, wider shadow */
+  z-index: 1001;
+  max-height: 70vh;
+  overflow-y: auto;
+  display: none; 
+}
+
+.custom-predictive-results:not(:empty) {
+  display: block;
+}
+
+/* --- DAWN PREDICTIVE SEARCH CLASSES --- */
+
+.predictive-search__results-groups-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Matches "SUGGESTIONS" and "PRODUCTS" styling */
+.predictive-search__heading {
+  margin: 0;
+  padding: 20px 24px 12px; /* Increased padding for breathing room */
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #f0f0f0;
+  color: #000000;
+}
+
+.predictive-search__list-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.predictive-search__item {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px; /* Increased padding */
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s;
+  gap: 20px; /* Increased gap between image and text */
+}
+
+.predictive-search__item:hover {
+  background-color: #f9f9f9;
+}
+
+/* Specific styling for simple suggestions (like "Tops") */
+.predictive-search__item--term {
+  padding: 14px 24px;
+  color: #5B9A9C;
+  font-size: 16px;
+}
+
+/* Product Image */
+.predictive-search__image {
+  width: 80px; /* Slightly larger image */
+  height: 96px; 
+  object-fit: cover;
+  border-radius: 4px;
+  background: #f5f5f5;
+  flex-shrink: 0;
+}
+
+/* Text Content */
+.predictive-search__item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1; /* Forces text container to take up remaining space */
+  padding-right: 12px;
+}
+
+/* Teal Product Title */
+.predictive-search__item-heading {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400; 
+  color: #5B9A9C; 
+  line-height: 1.5; /* Slightly taller line-height for readability */
+}
+
+.predictive-search__price {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* "Search for..." Bottom Button */
+.predictive-search__search-for-button {
+  display: block;
+  margin: 20px 24px 24px; /* Increased margins to match new padding */
+  padding: 14px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #1a1a1a; 
+  border-radius: 4px;
+  color: #1a1a1a;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.predictive-search__search-for-button:hover {
+  background: #f5f5f5;
+}
+
+/* Loading Spinner */
+.predictive-search__loading-state {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  animation: rotate 2s linear infinite;
+}
+
+.spinner .path {
+  stroke: #1a1a1a;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes dash {
+  0% { stroke-dasharray: 1, 150; stroke-dashoffset: 0; }
+  50% { stroke-dasharray: 90, 150; stroke-dashoffset: -35; }
+  100% { stroke-dasharray: 90, 150; stroke-dashoffset: -124; }
+}

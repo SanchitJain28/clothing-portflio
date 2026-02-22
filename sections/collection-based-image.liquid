@@ -1,0 +1,113 @@
+{{ 'collection-based-image.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign matched_image = blank
+  assign matched_url = blank
+
+  if product != blank
+    # Loop through all the blocks you add in the theme editor
+    for block in section.blocks
+      assign target_collection = block.settings.collection
+
+      if target_collection != blank
+        # Check if the current product belongs to this block's collection
+        for prod_col in product.collections
+          if prod_col.handle == target_collection.handle
+            assign matched_image = block.settings.image
+            assign matched_url = target_collection.url
+            break
+          endif
+        endfor
+      endif
+
+      # Stop looking if we found a match
+      if matched_image != blank
+        break
+      endif
+    endfor
+  endif
+
+  # If no collections matched, use the fallback image and link
+  if matched_image == blank
+    assign matched_image = section.settings.fallback_image
+    assign matched_url = section.settings.fallback_link
+  endif
+  -%}
+
+  <section class="collection-based-image {% if section.settings.full_width %}collection-based-image--full-width{% else %}page-width{% endif %}">
+  {% if matched_image != blank %}
+
+  <!-- If there is a matched URL, wrap the image in a link -->
+  {% if matched_url != blank %}
+  <a href="{{ matched_url }}" class="collection-based-image__link">
+  {% endif %}
+
+  <img
+  src="{{ matched_image | image_url: width: 2000 }}"
+  alt="{{ matched_image.alt | default: product.title | escape }}"
+  class="collection-based-image__img"
+  loading="lazy"
+  width="{{ matched_image.width }}"
+  height="{{ matched_image.height }}"
+  >
+
+  {% if matched_url != blank %}
+  </a>
+  {% endif %}
+
+  {% else %}
+  <!-- Shows only in theme editor if you haven't uploaded anything -->
+  <div class="collection-based-image__placeholder">
+  {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+  </div>
+  {% endif%}</section>{% schema %}
+{
+  "name": "Collection Based Image",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "This section displays a specific image based on the collection the current product belongs to. Clicking it redirects to that collection."
+    },
+    {
+      "type": "image_picker",
+      "id": "fallback_image",
+      "label": "Fallback Image",
+      "info": "This image will show if the product doesn't belong to any of the collections defined in the blocks."
+    },
+    {
+      "type": "url",
+      "id": "fallback_link",
+      "label": "Fallback Link",
+      "info": "Where should the fallback image link to?"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Make image full screen width",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_rule",
+      "name": "Collection Image Rule",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "If Product is in this Collection..."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "...Show this Image (Links to Collection)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Based Image"
+    }
+  ]
+}{% endschema %}

@@ -1,0 +1,42 @@
+{% comment %}
+  Renders product price for product cards
+
+  Accepts:
+  - product: {Object} Product Liquid object (required)
+  - show_compare_at_price: {Boolean} Show compare at price (optional, default: true)
+
+  Usage:
+  {% render 'card-product-price', product: product %}
+{% endcomment %}
+
+{%- liquid
+  assign target = product
+  assign compare_at_price = target.compare_at_price
+  assign price = target.price
+  assign available = target.available
+  assign money_price = price | money
+
+  if settings.currency_code_enabled
+    assign money_price = price | money_with_currency
+  endif
+-%}
+
+<div class="card-price {% if available == false %}card-price--sold-out{% endif %} {% if compare_at_price > price %}card-price--on-sale{% endif %}">
+  <div class="card-price__wrapper">
+    {%- if compare_at_price > price and show_compare_at_price -%}
+      <span class="card-price__compare">
+        {% if settings.currency_code_enabled %}
+          {{ compare_at_price | money_with_currency }}
+        {% else %}
+          {{ compare_at_price | money }}
+        {% endif %}
+      </span>
+    {%- endif -%}
+
+    <span class="card-price__current {% if compare_at_price > price %}card-price__current--sale{% endif %}">
+      {{ money_price }}
+    </span>
+  </div>
+
+
+</div>

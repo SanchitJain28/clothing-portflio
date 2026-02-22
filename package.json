@@ -1,0 +1,16 @@
+{
+  "name": "clothing_portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "shopify theme dev --theme 137985884221",
+    "push": "shopify theme push --theme 137985884221",
+    "pull": "shopify theme pull --theme 137985884221"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

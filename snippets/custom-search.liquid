@@ -1,0 +1,73 @@
+{% comment %}
+  Renders a custom header search.
+  Usage: {% render 'custom-search' %}
+{% endcomment %}
+
+{%- if settings.predictive_search_enabled -%}
+  <predictive-search class="custom-search-container" data-loading-text="{{ 'accessibility.loading' | t }}">
+{%- else -%}
+  <search-form class="custom-search-container">
+{%- endif -%}
+
+  <form action="{{ routes.search_url }}" method="get" role="search" class="custom-search-form">
+    
+    <!-- Outer Search Icon (Bold, left of the input box) -->
+    <button type="submit" class="custom-search-btn-icon" aria-label="{{ 'general.search.search' | t }}">
+      <svg class="custom-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </button>
+
+    <!-- Bordered Input Wrapper -->
+    <div class="custom-search-input-wrapper">
+      <input
+        class="custom-search-input"
+        id="Custom-Search-Input"
+        type="search"
+        name="q"
+        value="{{ search.terms | escape }}"
+        placeholder="Start typing to see res"
+        {%- if settings.predictive_search_enabled -%}
+          role="combobox"
+          aria-expanded="false"
+          aria-owns="predictive-search-results"
+          aria-controls="predictive-search-results"
+          aria-haspopup="listbox"
+          aria-autocomplete="list"
+          autocorrect="off"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+        {%- endif -%}
+      >
+      <input type="hidden" name="options" value="last">
+
+      <!-- Reset/Clear Button (Blue X) -->
+      <button type="reset" class="custom-reset-button hidden" aria-label="{{ 'general.search.reset' | t }}">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- The Result Dropdown Container -->
+    {%- if settings.predictive_search_enabled -%}
+      <div class="custom-predictive-results" tabindex="-1" data-predictive-search>
+        <div class="predictive-search__loading-state">
+          <svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+          </svg>
+        </div>
+      </div>
+      <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+    {%- endif -%}
+
+  </form>
+
+{%- if settings.predictive_search_enabled -%}
+  </predictive-search>
+{%- else -%}
+  </search-form>
+{%- endif -%}

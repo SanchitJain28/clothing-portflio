@@ -1,0 +1,19 @@
+{% comment %}
+  Star Rating Icon Snippet - Maison Luxe
+  Usage: {% render 'icon-star-rating', rating: 4.5 %}
+{% endcomment %}
+
+{%- liquid
+  assign rating = rating | default: 5 | round
+  assign max_stars = 5
+-%}
+
+<div class="icon-star-rating" data-rating="{{ rating }}">
+  {%- for i in (1..max_stars) -%}
+    {%- if i <= rating -%}
+      <i class="fa-solid fa-star"></i>
+    {%- else -%}
+      <i class="fa-regular fa-star"></i>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

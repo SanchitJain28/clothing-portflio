@@ -1,0 +1,134 @@
+{{ 'collection-carousel.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'collection-carousel.js' | asset_url }}" defer="defer"></script>
+
+<section class="collection-carousel" data-section-id="{{ section.id }}">
+  <div class="collection-carousel__wrapper">
+    
+    <!-- Left Navigation Arrow -->
+    <button class="collection-carousel__nav collection-carousel__nav--prev" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+
+    <!-- Cards Track -->
+    <div class="collection-carousel__track-container">
+      <div class="collection-carousel__track">
+        {% for block in section.blocks %}
+          <a href="{{ block.settings.link | default: '#' }}" class="collection-carousel__card {% if forloop.index0 == 1 %}is-active{% endif %}" {{ block.shopify_attributes }}>
+            
+            <!-- Giant Background Text -->
+            <div class="collection-carousel__bg-text" aria-hidden="true">
+              {{ block.settings.bg_text }}
+            </div>
+
+            <!-- Content (Title & Subtitle) -->
+            <div class="collection-carousel__content">
+              <h3 class="collection-carousel__title">{{ block.settings.title }}</h3>
+              <p class="collection-carousel__subtitle">{{ block.settings.subtitle }}</p>
+            </div>
+
+            <!-- Model Image -->
+            <div class="collection-carousel__image-wrapper">
+              {% if block.settings.image != blank %}
+                <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.title | escape }}" class="collection-carousel__image" loading="lazy">
+              {% else %}
+                {{ 'collection-1' | placeholder_svg_tag: 'collection-carousel__placeholder' }}
+              {% endif %}
+            </div>
+
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Right Navigation Arrow -->
+    <button class="collection-carousel__nav collection-carousel__nav--next" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- Bottom Progress Bar -->
+  <div class="collection-carousel__progress-container">
+    <div class="collection-carousel__progress-track">
+      <div class="collection-carousel__progress-bar"></div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection Carousel",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "CO-ORDS"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Mix.Match.Move"
+        },
+        {
+          "type": "text",
+          "id": "bg_text",
+          "label": "Background Text (Giant faded text)",
+          "default": "CO-ORDS"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Model Image (Transparent PNG recommended)"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Collection Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Carousel",
+      "blocks": [
+        {
+          "type": "collection",
+          "settings": {
+            "title": "ALL-DAY WEAR",
+            "subtitle": "AM Meetings To PM Workouts",
+            "bg_text": "ALL-DAY WEAR"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "title": "CO-ORDS",
+            "subtitle": "Mix.Match.Move",
+            "bg_text": "CO-ORDS"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "title": "TRAVEL WEAR",
+            "subtitle": "Sky-bound luxury",
+            "bg_text": "TRAVEL"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

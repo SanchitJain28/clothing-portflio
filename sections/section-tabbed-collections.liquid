@@ -1,0 +1,277 @@
+{{ 'section-tabbed-collections.css' | asset_url | stylesheet_tag }}
+
+<div class="tabbed-collections" data-section-id="{{ section.id }}">
+  <div class="page-width">
+    <div class="tabbed-collections__header">
+      {% if section.settings.heading != blank %}
+        <h2 class="tabbed-collections__title">{{ section.settings.heading }}</h2>
+      {% endif %}
+
+      <div class="tabbed-collections__tabs" role="tablist">
+        {% for block in section.blocks %}
+          {% if block.settings.collection != blank %}
+            <button
+              class="tabbed-collections__tab{% if forloop.first %} active{% endif %}"
+              role="tab"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+              data-tab-index="{{ forloop.index0 }}"
+              data-collection-handle="{{ block.settings.collection.handle }}"
+              {{ block.shopify_attributes }}>
+              {{ block.settings.collection.title }}
+            </button>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="tabbed-collections__content">
+      {% for block in section.blocks %}
+        {% if block.settings.collection != blank %}
+          {% assign collection = block.settings.collection %}
+          <div
+            class="tabbed-collections__panel{% if forloop.first %} active{% endif %}"
+            role="tabpanel"
+            data-panel-index="{{ forloop.index0 }}">
+            <div class="tabbed-collections__grid grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop">
+              {% assign products_to_show = section.settings.products_to_show | default: 4 %}
+              {% for product in collection.products limit: products_to_show %}
+                <div class="grid__item">
+                  {% render 'card-product'
+                    , card_product: product
+                    , media_aspect_ratio: section.settings.image_ratio
+                    , image_shape: section.settings.image_shape
+                    , lazy_load: true
+                    , show_secondary_image: section.settings.show_secondary_image
+                    , show_vendor: section.settings.show_vendor
+                    , show_rating: section.settings.show_rating
+                    , section_id: section.id
+                    , quick_add: section.settings.quick_add
+                  %}
+                </div>
+              {% endfor %}
+            </div>
+
+            {% if section.settings.show_view_all and collection.products.size > products_to_show %}
+              <div class="tabbed-collections__view-all">
+                <a href="{{ collection.url }}" class="button button--secondary">
+                  View All {{ collection.title }}
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'section-tabbed-collections.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+  {
+    "name": "Tabbed Collections",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Shop by Category"
+      },
+      {
+        "type": "range",
+        "id": "products_to_show",
+        "min": 2,
+        "max": 12,
+        "step": 1,
+        "default": 4,
+        "label": "Products to show"
+      },
+      {
+        "type": "range",
+        "id": "columns_desktop",
+        "min": 2,
+        "max": 5,
+        "step": 1,
+        "default": 4,
+        "label": "Columns (desktop)"
+      },
+      {
+        "type": "select",
+        "id": "columns_mobile",
+        "options": [
+          {
+            "value": "1",
+            "label": "1 column"
+          },
+          {
+            "value": "2",
+            "label": "2 columns"
+          }
+        ],
+        "default": "2",
+        "label": "Columns (mobile)"
+      },
+      {
+        "type": "select",
+        "id": "image_ratio",
+        "options": [
+          {
+            "value": "adapt",
+            "label": "Adapt to image"
+          },
+          {
+            "value": "portrait",
+            "label": "Portrait"
+          },
+          {
+            "value": "square",
+            "label": "Square"
+          }
+        ],
+        "default": "portrait",
+        "label": "Image ratio"
+      },
+      {
+        "type": "select",
+        "id": "image_shape",
+        "options": [
+          {
+            "value": "default",
+            "label": "Default"
+          },
+          {
+            "value": "arch",
+            "label": "Arch"
+          },
+          {
+            "value": "blob",
+            "label": "Blob"
+          },
+          {
+            "value": "chevronleft",
+            "label": "Chevron left"
+          },
+          {
+            "value": "chevronright",
+            "label": "Chevron right"
+          },
+          {
+            "value": "diamond",
+            "label": "Diamond"
+          },
+          {
+            "value": "parallelogram",
+            "label": "Parallelogram"
+          },
+          {
+            "value": "round",
+            "label": "Round"
+          }
+        ],
+        "default": "default",
+        "label": "Image shape"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_secondary_image",
+        "default": false,
+        "label": "Show second image on hover"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_vendor",
+        "default": false,
+        "label": "Show vendor"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_rating",
+        "default": false,
+        "label": "Show product rating"
+      },
+      {
+        "type": "select",
+        "id": "quick_add",
+        "default": "none",
+        "label": "Quick add button",
+        "info": "Requires Shopify Payments to be enabled",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "standard",
+            "label": "Standard"
+          },
+          {
+            "value": "bulk",
+            "label": "Bulk"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "show_view_all",
+        "default": true,
+        "label": "Show 'View All' button"
+      },
+      {
+        "type": "header",
+        "content": "Spacing"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 36
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection",
+        "name": "Collection",
+        "limit": 5,
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Tabbed Collections",
+        "blocks": [
+          {
+            "type": "collection"
+          },
+          {
+            "type": "collection"
+          },
+          {
+            "type": "collection"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,144 @@
+{{ 'section-instagram-feed.css' | asset_url | stylesheet_tag }}
+
+  <section class="instagram-feed-section" aria-label="Instagram Feed">
+
+  <!-- Heading Section -->
+  <div class="instagram-heading-container">
+    <h2 class="instagram-heading">
+      <a
+        href="{{ section.settings.instagram_url }}"
+        target="_blank"
+        class="instagram-link-text">
+        {{ section.settings.heading }}
+      </a>
+    </h2>
+  </div>
+
+  <!-- Image Grid -->
+  <div class="instagram-grid">
+    {%- for block in section.blocks -%}
+      <a
+        href="{{ block.settings.link | default: section.settings.instagram_url }}"
+        class="instagram-item"
+        {{ block.shopify_attributes }}>
+
+        {%- if block.settings.image != blank -%}
+          {{ block.settings.image | image_url: width: 600 | image_tag: class: 'instagram-img', loading: 'lazy', alt: block.settings.image.alt | default: 'Instagram post'
+          }}
+        {%- else -%}
+          <!-- Placeholder if no image is uploaded -->
+          {{ 'image' | placeholder_svg_tag: 'instagram-img placeholder-svg' }}
+        {%- endif -%}
+
+        <!-- Hover Icon -->
+        <div class="instagram-icon-overlay">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect
+              x="2"
+              y="2"
+              width="20"
+              height="20"
+              rx="5"
+              ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line
+              x1="17.5"
+              y1="6.5"
+              x2="17.51"
+              y2="6.5"></line>
+          </svg>
+        </div>
+      </a>
+    {%- endfor -%}
+  </div>
+
+</section>
+
+{% schema %}
+  {
+    "name": "Instagram Grid",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading Text",
+        "default": "Follow us on Instagram @flexformathletics"
+      },
+      {
+        "type": "url",
+        "id": "instagram_url",
+        "label": "Instagram Profile Link"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "post",
+        "name": "Instagram Post",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Post Link (Optional)",
+            "info": "Links to the specific post. If blank, uses the profile link."
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FlexForm Instagram Grid",
+        "blocks": [
+          {
+            "type": "post"
+          },
+          {
+            "type": "post"
+          },
+          {
+            "type": "post"
+          },
+          {
+            "type": "post"
+          },
+          {
+            "type": "post"
+          },
+          {
+            "type": "post"
+          },
+          {
+            "type": "post"
+          },
+          {
+            "type": "post"
+          },
+          {
+            "type": "post"
+          },
+          {
+            "type": "post"
+          },
+          {
+            "type": "post"
+          },
+          {
+            "type": "post"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

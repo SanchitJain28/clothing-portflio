@@ -1,0 +1,119 @@
+/* Instagram Feed Section Styling */
+.instagram-feed-section {
+  padding: 4rem 0 0 0; /* Space for heading, no bottom padding */
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* Heading Typography */
+.instagram-heading-container {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding: 0 2rem;
+}
+
+.instagram-heading {
+  font-family: 'Times New Roman', Times, serif; /* Matches the serif font in image */
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.instagram-link-text {
+  text-decoration: none;
+  color: inherit;
+}
+
+.instagram-link-text:hover {
+  text-decoration: underline;
+}
+
+/* Grid Layout */
+.instagram-grid {
+  display: grid;
+  width: 100%;
+  /* Desktop: 6 items per row strictly as requested */
+  grid-template-columns: repeat(6, 1fr); 
+  gap: 0; /* Zero gap between images like the screenshot */
+}
+
+/* Image Item Styling */
+.instagram-item {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* Creates a perfect 1:1 Square */
+  overflow: hidden;
+  display: block;
+}
+
+.instagram-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect: Zoom and Overlay */
+.instagram-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Slight dark tint on hover */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.instagram-item:hover .instagram-img {
+  transform: scale(1.05);
+}
+
+.instagram-item:hover::after {
+  opacity: 1;
+}
+
+/* Icon Overlay (Optional: Instagram Icon on Hover) */
+.instagram-icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.instagram-item:hover .instagram-icon-overlay {
+  opacity: 1;
+}
+
+/* Responsive Design */
+
+/* Tablet (iPad): 3 per row */
+@media screen and (max-width: 1024px) {
+  .instagram-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Mobile: 2 per row (Best balance of size and density) */
+@media screen and (max-width: 480px) {
+  .instagram-heading {
+    font-size: 1.8rem; /* Slightly smaller heading */
+    margin-bottom: 2rem;
+  }
+  
+  .instagram-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

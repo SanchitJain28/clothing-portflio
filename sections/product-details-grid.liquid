@@ -1,0 +1,95 @@
+{{ 'products-details-grid.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'products-details-grid.js' | asset_url }}" defer="defer"></script>
+{%- assign current_handle = 'default' -%}
+
+
+{%- comment -%} Determine priority collection handle for JS logic {%- endcomment -%}
+{%- for collection in product.collections -%}
+  {%- if collection.handle == 'tops' -%}
+    {%- assign current_handle = 'tops' -%}
+    {%- break -%}
+  {%- elsif collection.handle == 'sports-bras' -%}
+    {%- assign current_handle = 'sports-bras' -%}
+    {%- break -%}
+  {%- elsif collection.handle == 'leggings' -%}
+    {%- assign current_handle = 'leggings' -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<div class="product-details-section page-width" data-collection-handle="{{ current_handle }}">
+  <div class="pd-grid-container">
+
+    <!-- COLUMN 1: Dynamic Description -->
+    <div class="pd-col pd-col-description">
+      <h3 class="pd-heading">DESCRIPTION</h3>
+      <div class="pd-content-text">
+        {{ product.description }}
+      </div>
+    </div>
+
+    <!-- COLUMN 2: Tech Specs (Populated via JS) -->
+    <div class="pd-col pd-col-specs">
+
+      <div class="spec-block">
+        <h3 class="pd-heading">FABRIC</h3>
+        <p id="js-fabric-content" class="pd-text-gray">Loading...</p>
+      </div>
+
+      <div class="spec-block">
+        <h3 class="pd-heading">PRODUCT TYPE</h3>
+        <p id="js-type-content" class="pd-text-gray">Loading...</p>
+      </div>
+
+      <div class="spec-block">
+        <h3 class="pd-heading">FIT SIZE</h3>
+        <!-- Visual Fit Slider -->
+        <div class="fit-slider-wrapper">
+          <div class="fit-labels">
+            <span>Runs small</span>
+            <span>Runs true to size</span>
+            <span>Runs large</span>
+          </div>
+          <div class="fit-track">
+            <div id="js-fit-dot" class="fit-dot"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COLUMN 3: Meta Info (Populated via JS) -->
+    <div class="pd-col pd-col-meta">
+
+      <div class="spec-block">
+        <h3 class="pd-heading">MODEL STATS:</h3>
+        <p id="js-model-content" class="pd-text-gray">Loading...</p>
+      </div>
+
+      <div class="spec-block">
+        <h3 class="pd-heading">SOLD BY</h3>
+        <p id="js-sold-content" class="pd-text-gray">
+          Country Of Origin: India<br><br>
+          Name Of Manufacturer/ Packer/ Importer:<br>
+          FlexForm Athletics Pvt Ltd<br><br>
+          104 Vasan Udyog Bhavan, Senapati Bapat Marg Lower Parel Mumbai 400013
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Details Grid",
+    "tag": "section",
+    "class": "section",
+    "presets": [
+      {
+        "name": "Product Details Grid"
+      }
+    ]
+  }
+{% endschema %}

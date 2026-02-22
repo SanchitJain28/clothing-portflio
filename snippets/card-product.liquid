@@ -1,0 +1,181 @@
+{% comment %}
+  Renders a product card
+  Accepts:
+  - card_product: {Object} Product Liquid object
+{% endcomment %}
+
+{%- if card_product and card_product != empty -%}
+  {%- liquid
+    assign target = card_product.selected_or_first_available_variant
+    assign compare_at_price = target.compare_at_price
+    assign price = target.price
+    assign available = target.available
+
+    # Calculate Discount Percentage
+    assign discount_percentage = 0
+    if compare_at_price > price
+      assign discount_percentage = compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price | round
+    endif
+  -%}
+
+  {{ 'component-card-custom.css' | asset_url | stylesheet_tag }}
+
+  <div class="custom-card-wrapper">
+    <div class="custom-product-card">
+      <div class="custom-card-image-container">
+        <a href="{{ card_product.url }}" class="custom-card-link">
+
+          {%- if card_product.featured_media -%}
+            <img
+              src="{{ card_product.featured_media | image_url: width: 800 }}"
+              alt="{{ card_product.featured_media.alt | escape }}"
+              class="custom-card-image"
+              loading="lazy"
+              width="{{ card_product.featured_media.width }}"
+              height="{{ card_product.featured_media.height }}">
+
+            {%- if card_product.media[1] != null -%}
+              <img
+                src="{{ card_product.media[1] | image_url: width: 800 }}"
+                alt="{{ card_product.media[1].alt | escape }}"
+                class="custom-card-image custom-card-image-secondary"
+                loading="lazy"
+                width="{{ card_product.media[1].width }}"
+                height="{{ card_product.media[1].height }}">
+            {%- endif -%}
+          {%- else -%}
+            {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </a>
+
+        <!-- Discount Badge (Top Left) -->
+        {%- if discount_percentage > 0 -%}
+          <div class="custom-badge-discount">
+            <span class="badge-percent">{{ discount_percentage }}% OFF</span>
+            <span class="badge-subtext">TESTED FOR<br>COMFORT</span>
+          </div>
+        {%- endif -%}
+
+        <!-- Quick Add Button (Top Right) -->
+        <button
+          type="button"
+          class="custom-quick-add-btn"
+          data-product-handle="{{ card_product.handle }}"
+          aria-label="Quick Add to Cart">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line
+              x1="3"
+              y1="6"
+              x2="21"
+              y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+            <line
+              x1="12"
+              y1="8"
+              x2="12"
+              y2="16"></line>
+            <line
+              x1="8"
+              y1="12"
+              x2="16"
+              y2="12"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="custom-card-content">
+        <h3 class="custom-card-title">
+          <a href="{{ card_product.url }}" class="custom-card-title-link">
+            {{ card_product.title | escape }}
+          </a>
+        </h3>
+
+        <!-- Subtitle / Short Description -->
+        <div class="custom-card-subtitle">
+          {%- if card_product.metafields.descriptors.subtitle != blank -%}
+            {{ card_product.metafields.descriptors.subtitle }}
+          {%- else -%}
+            {{ card_product.type }}
+          {%- endif -%}
+        </div>
+
+        <!-- Price -->
+        <div class="card-price__wrapper">
+          {%- if compare_at_price > price -%}
+            <span class="card-price__compare">{{ compare_at_price | money }}</span>
+          {%- endif -%}
+          <span class="card-price__current">{{ price | money }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{%- else -%}
+  <!-- Empty State -->
+  <div class="custom-card-wrapper">
+    <div class="custom-product-card">
+      <div class="custom-card-image-container">
+        {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      </div>
+      <div class="custom-card-content">
+        <h3 class="custom-card-title">Example Product</h3>
+        <span class="card-price__current">$19.99</span>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+<!-- SHARED MODAL STRUCTURE (Ideally place this once in your section file, but safe here if handled by ID) -->
+{% unless request.design_mode %}
+  <div
+    id="quick-add-modal"
+    class="qa-modal"
+    aria-hidden="true">
+    <div class="qa-modal__overlay"></div>
+    <div class="qa-modal__content">
+      <button class="qa-modal__close" aria-label="Close">&times;</button>
+
+      <div class="qa-modal__body">
+        <div class="qa-product-image">
+          <img
+            id="qa-image"
+            src=""
+            alt="">
+        </div>
+        <div class="qa-product-details">
+          <h2 id="qa-title"></h2>
+          <div class="qa-price-wrapper">
+            <span id="qa-price"></span>
+            <span id="qa-compare-price"></span>
+          </div>
+
+          <form id="qa-form">
+            <div id="qa-variants" class="qa-variants-container"></div>
+            <input
+              type="hidden"
+              name="id"
+              id="qa-variant-id">
+
+            <button
+              type="submit"
+              id="qa-add-btn"
+              class="qa-add-btn">
+              ADD TO CART
+            </button>
+          </form>
+          <div id="qa-error" class="qa-error-msg"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="{{ 'quick-add-modal.js' | asset_url }}" defer="defer"></script>
+{% endunless %}

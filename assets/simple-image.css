@@ -1,0 +1,40 @@
+/* simple-image.css */
+
+.simple-image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.simple-image-section--full-width {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.simple-image__img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.simple-image__placeholder-wrapper {
+  width: 100%;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.simple-image__placeholder {
+  width: 100px;
+  height: 100px;
+  fill: #cccccc;
+}

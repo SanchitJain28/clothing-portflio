@@ -1,0 +1,147 @@
+/* Custom Footer Variables */
+:root {
+  --footer-bg: #121212;
+  --footer-text: #e5e5e5;
+  --footer-heading: #ffffff;
+  --footer-tagline: #555555;
+  --footer-padding-y: 60px;
+}
+
+.custom-footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: var(--footer-padding-y) 0 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Page Width Container */
+.page-width {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 1. Large Tagline */
+.footer-tagline-container {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.footer-big-tagline {
+  /* Fluid typography: scales between 40px and 120px depending on screen width */
+  font-size: clamp(3rem, 10vw, 7.5rem); 
+  font-weight: 600;
+  color: var(--footer-tagline);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* 2. Grid Layout */
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px; /* Ensures columns stack on mobile */
+  max-width: 350px;
+}
+
+/* Headings */
+.footer-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--footer-heading);
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+/* Links (Menus) */
+.footer-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu-list li {
+  margin-bottom: 12px;
+}
+
+.footer-link {
+  color: var(--footer-text);
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+  font-weight: 400;
+}
+
+.footer-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Address Text */
+.footer-address-text {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--footer-text);
+  margin-bottom: 20px;
+}
+
+/* Social Icons */
+.footer-social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-link {
+  color: var(--footer-text);
+  transition: transform 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.social-link:hover {
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* 3. Footer Bottom */
+.footer-bottom {
+  padding-top: 30px;
+}
+
+.footer-copyright {
+  font-size: 1.1rem;
+  color: #888;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .custom-footer {
+    padding-top: 40px;
+  }
+  
+  .footer-tagline-container {
+    margin-bottom: 30px;
+    text-align: left; /* Align tagline left on mobile like screenshot */
+  }
+
+  .footer-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-column {
+    width: 100%;
+    max-width: 100%;
+  }
+}

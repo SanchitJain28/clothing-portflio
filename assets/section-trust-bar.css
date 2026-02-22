@@ -1,0 +1,83 @@
+/* Trust Bar Section Styling */
+.trust-bar-section {
+  padding: 2.5rem 0;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  overflow: hidden; /* Essential for carousel */
+  position: relative;
+}
+
+.trust-bar-container {
+  display: flex;
+  flex-wrap: nowrap; /* Force single row on ALL screens */
+  align-items: center; /* Vertically center items */
+  justify-content: flex-start;
+  gap: 4rem; 
+  width: max-content; /* Allows content to expand horizontally */
+  padding: 0 2rem;
+  will-change: transform; 
+}
+
+.trust-item {
+  flex-shrink: 0; /* Prevent squishing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 160px;
+}
+
+.trust-icon-wrapper {
+  margin-bottom: 1.2rem;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trust-icon {
+  font-size: 2.8rem;
+  color: #333333;
+}
+
+.trust-text {
+  font-family: inherit;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: #333333;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .trust-bar-container {
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .trust-bar-section {
+    padding: 1.5rem 0;
+  }
+
+  /* Keep flex layout, just adjust sizes */
+  .trust-bar-container {
+    gap: 2.5rem; /* Smaller gap for mobile */
+    padding: 0 1.5rem;
+  }
+  
+  .trust-item {
+    width: 130px; /* Slightly smaller item width */
+  }
+
+  .trust-icon {
+    font-size: 2.2rem;
+  }
+
+  .trust-text {
+    font-size: 1.1rem;
+  }
+}

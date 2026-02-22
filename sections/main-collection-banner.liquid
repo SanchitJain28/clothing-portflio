@@ -1,0 +1,116 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+
+{% assign current_desktop_image = blank %}
+{% assign current_mobile_image = blank %}
+
+{% comment %}
+  Loop through the blocks. If the block's selected collection matches the current page,
+  grab its specific images.
+{% endcomment %}
+{% for block in section.blocks %}
+  {% if block.settings.collection.handle == collection.handle %}
+    {% assign current_desktop_image = block.settings.desktop_image %}
+    {% assign current_mobile_image = block.settings.mobile_image %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% comment %}
+  Fallback: If no specific block is found for this collection, use the default images.
+{% endcomment %}
+{% if current_desktop_image == blank %}
+  {% assign current_desktop_image = section.settings.default_desktop_image %}
+  {% assign current_mobile_image = section.settings.default_mobile_image %}
+{% endif %}
+
+<div class="collection-hero">
+  <!-- Visually hidden H1 for SEO and Screen Readers -->
+  <h1 class="visually-hidden">{{ collection.title | escape }}</h1>
+
+  {%- if current_desktop_image != blank -%}
+    <div class="collection-hero__image-wrapper">
+
+        <!-- Desktop Banner -->
+      <img
+        src="{{ current_desktop_image | image_url: width: 2000 }}"
+        alt="{{ current_desktop_image.alt | default: collection.title | escape }}"
+        class="collection-hero__image collection-hero__image--desktop {% if current_mobile_image != blank %}hide-mobile{% endif %}"
+        width="{{ current_desktop_image.width }}"
+        height="{{ current_desktop_image.height }}"
+        loading="eager">
+
+      <!-- Mobile Banner (Shows only on small screens if uploaded) -->
+      {%- if current_mobile_image != blank -%}
+        <img
+          src="{{ current_mobile_image | image_url: width: 800 }}"
+          alt="{{ current_mobile_image.alt | default: collection.title | escape }}"
+          class="collection-hero__image collection-hero__image--mobile"
+          width="{{ current_mobile_image.width }}"
+          height="{{ current_mobile_image.height }}"
+          loading="eager">
+      {%- endif -%}
+
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+  {
+    "name": "Collection Banner",
+    "class": "section",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Use the blocks below to assign unique images to specific collections."
+      },
+      {
+        "type": "header",
+        "content": "Default Fallback Images"
+      },
+      {
+        "type": "image_picker",
+        "id": "default_desktop_image",
+        "label": "Default Desktop Image",
+        "info": "Shows if no specific block is set for a collection. (1920x450px)"
+      },
+      {
+        "type": "image_picker",
+        "id": "default_mobile_image",
+        "label": "Default Mobile Image (Optional)",
+        "info": "800x800px recommended"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection_banner",
+        "name": "Specific Collection",
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Select Collection",
+            "info": "Which collection should this banner show on?"
+          },
+          {
+            "type": "image_picker",
+            "id": "desktop_image",
+            "label": "Desktop Image",
+            "info": "1920x450px recommended"
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "Mobile Image (Optional)",
+            "info": "800x800px or 800x1000px recommended"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection Banner"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,94 @@
+{{ 'section-social-logos.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'section-social-logos.js' | asset_url }}" defer="defer"></script>
+
+<div class="social-section">
+
+  {%- if section.settings.heading != blank -%}
+    <h3 class="social-heading">{{ section.settings.heading }}</h3>
+  {%- endif -%}
+
+  <div class="social-container">
+    {%- for block in section.blocks -%}
+      <a
+        href="{{ block.settings.link }}"
+        class="social-item"
+        target="_blank"
+        aria-label="Social Link"
+        {{ block.shopify_attributes }}>
+        <!-- Icon rendering -->
+        <i class="{{ block.settings.icon_class }} social-icon"></i>
+      </a>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Social Media Icons",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Section Heading",
+        "default": "FOLLOW US @FLEXFORM"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "social_icon",
+        "name": "Social Icon",
+        "settings": [
+          {
+            "type": "text",
+            "id": "icon_class",
+            "label": "Font Awesome Class",
+            "default": "fa-brands fa-instagram",
+            "info": "e.g. 'fa-brands fa-instagram', 'fa-brands fa-tiktok', 'fa-brands fa-youtube'"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Social Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Social Media Icons",
+        "blocks": [
+          {
+            "type": "social_icon",
+            "settings": {
+              "icon_class": "fa-brands fa-instagram"
+            }
+          },
+          {
+            "type": "social_icon",
+            "settings": {
+              "icon_class": "fa-brands fa-facebook-f"
+            }
+          },
+          {
+            "type": "social_icon",
+            "settings": {
+              "icon_class": "fa-brands fa-tiktok"
+            }
+          },
+          {
+            "type": "social_icon",
+            "settings": {
+              "icon_class": "fa-brands fa-youtube"
+            }
+          },
+          {
+            "type": "social_icon",
+            "settings": {
+              "icon_class": "fa-brands fa-pinterest-p"
+            }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

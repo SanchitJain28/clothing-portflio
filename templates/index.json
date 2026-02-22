@@ -1,0 +1,515 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gsap_carousel_KAD9kg": {
+      "type": "gsap-carousel",
+      "blocks": {
+        "slide_TbyTCV": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/PLS-Sale-26-Desktop-banner_1500x_b4ffb1d4-edfc-4489-a59a-407f01cc1dac.webp",
+            "overlay_opacity": 20,
+            "subheading": "",
+            "heading": "",
+            "text": "",
+            "text_alignment": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "slide_edyeTK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Winter-banner-3_1500x_208a7572-5655-4ba7-9df3-ddee619a813e.webp",
+            "overlay_opacity": 20,
+            "subheading": "",
+            "heading": "",
+            "text": "",
+            "text_alignment": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "slide_EwFgfV": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/WebsiteBanner_31Dec_1500x_b69d161b-04ad-4580-856c-6a7161c30ecd.webp",
+            "overlay_opacity": 20,
+            "subheading": "",
+            "heading": "",
+            "text": "",
+            "text_alignment": "center",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_TbyTCV",
+        "slide_edyeTK",
+        "slide_EwFgfV"
+      ],
+      "name": "GSAP Animated Slider",
+      "settings": {
+        "desktop_height": 650,
+        "mobile_height": 400,
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collection_carousel_VTHPCT": {
+      "type": "collection-carousel",
+      "blocks": {
+        "collection_4fEKme": {
+          "type": "collection",
+          "settings": {
+            "title": "CO-ORDS",
+            "subtitle": "Mix.Match.Move",
+            "bg_text": "CO-ORDS",
+            "image": "shopify://shop_images/FLEXFORM_COLLECTION_GRID_PHOTOS-Photoroom.png",
+            "link": ""
+          }
+        },
+        "collection_FLNyB6": {
+          "type": "collection",
+          "settings": {
+            "title": "ALL-DAY WEAR",
+            "subtitle": "AM Meetings To PM Workouts",
+            "bg_text": "ALL-DAY WEAR",
+            "image": "shopify://shop_images/SFTOPS4886-1_1080x_6d573b02-8143-4802-90d6-e28c91f0c05c-Photoroom.png",
+            "link": ""
+          }
+        },
+        "collection_VqJYjY": {
+          "type": "collection",
+          "settings": {
+            "title": "TRAVEL WEAR",
+            "subtitle": "Sky-bound luxury",
+            "bg_text": "TRAVEL",
+            "image": "shopify://shop_images/FLEXFORM_COLLECTION_GRID_PHOTOS_1_-Photoroom.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_4fEKme",
+        "collection_FLNyB6",
+        "collection_VqJYjY"
+      ],
+      "name": "Collection Carousel",
+      "settings": {}
+    },
+    "collection_arch_grid_Jexdhz": {
+      "type": "collection-arch-grid",
+      "blocks": {
+        "collection_MrpPNY": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify://shop_images/dvnt_leno_vgra_01.webp",
+            "title": "Shop Bestsellers",
+            "link": ""
+          }
+        },
+        "collection_Cyznw9": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify://shop_images/Womens-Summit-Valley153-Long-Sleeve-Half-Zip-Top-WHITE.webp",
+            "title": "Shop Topwear",
+            "link": ""
+          }
+        },
+        "collection_3CVyaY": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify://shop_images/Front-Zip-Women_s-High-Impact-Support-Sports-Bra.avif",
+            "title": "Shop Bottomwear",
+            "link": ""
+          }
+        },
+        "collection_w6Btzi": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify://shop_images/W30011152213_24AW1_2.avif",
+            "title": "Shop Coords",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_MrpPNY",
+        "collection_Cyznw9",
+        "collection_3CVyaY",
+        "collection_w6Btzi"
+      ],
+      "name": "Collection Arch Grid",
+      "settings": {
+        "heading": "JOIN OUR SELF-LOVE CLUB",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_tabbed_collections_acnxrd": {
+      "type": "section-tabbed-collections",
+      "blocks": {
+        "collection_KrpXtV": {
+          "type": "collection",
+          "settings": {
+            "collection": "tops"
+          }
+        },
+        "collection_En8LJD": {
+          "type": "collection",
+          "settings": {
+            "collection": "sports-bras"
+          }
+        },
+        "collection_tmFt8w": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers"
+          }
+        },
+        "collection_zgpqm4": {
+          "type": "collection",
+          "settings": {
+            "collection": "leggings"
+          }
+        },
+        "collection_rr36Uh": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-arrivals"
+          }
+        }
+      },
+      "block_order": [
+        "collection_KrpXtV",
+        "collection_En8LJD",
+        "collection_tmFt8w",
+        "collection_zgpqm4",
+        "collection_rr36Uh"
+      ],
+      "name": "Tabbed Collections",
+      "settings": {
+        "heading": "Shop by Category",
+        "products_to_show": 5,
+        "columns_desktop": 5,
+        "columns_mobile": "2",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "show_view_all": true,
+        "padding_top": 16,
+        "padding_bottom": 12
+      }
+    },
+    "social_logos_J8JDRR": {
+      "type": "social-logos",
+      "blocks": {
+        "social_icon_7UiYAa": {
+          "type": "social_icon",
+          "settings": {
+            "icon_class": "fa-brands fa-instagram",
+            "link": ""
+          }
+        },
+        "social_icon_M8Y4kV": {
+          "type": "social_icon",
+          "settings": {
+            "icon_class": "fa-brands fa-facebook-f",
+            "link": ""
+          }
+        },
+        "social_icon_YDqYQi": {
+          "type": "social_icon",
+          "settings": {
+            "icon_class": "fa-brands fa-tiktok",
+            "link": ""
+          }
+        },
+        "social_icon_M4cCGL": {
+          "type": "social_icon",
+          "settings": {
+            "icon_class": "fa-brands fa-youtube",
+            "link": ""
+          }
+        },
+        "social_icon_WhJVMm": {
+          "type": "social_icon",
+          "settings": {
+            "icon_class": "fa-brands fa-pinterest-p",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "social_icon_7UiYAa",
+        "social_icon_M8Y4kV",
+        "social_icon_YDqYQi",
+        "social_icon_M4cCGL",
+        "social_icon_WhJVMm"
+      ],
+      "name": "Social Media Icons",
+      "settings": {
+        "heading": "FOLLOW US @FLEXFORM"
+      }
+    },
+    "section_testimonial_carousel_3nM3Y7": {
+      "type": "section-testimonial-carousel",
+      "blocks": {
+        "testimonial_hiFkYe": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Sarah M.",
+            "review_title": "Love it",
+            "review_text": "Omg the material and stretch is so damn good. I was worried about the camel toe but it turns out so good I don't have to worry about it anymore 😊 love it so much. Thank you 😊",
+            "review_image": "shopify://shop_images/dvnt_leno_vgra_02.webp",
+            "badge_text": ""
+          }
+        },
+        "testimonial_fb8NC4": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Sarah M.",
+            "review_title": "Love it",
+            "review_text": "Omg the material and stretch is so damn good. I was worried about the camel toe but it turns out so good I don't have to worry about it anymore 😊 love it so much. Thank you 😊",
+            "review_image": "shopify://shop_images/f2e7b8230f8ceb0c7d122d400b14f410f5d908141ae9e08185bb5796f3186708.webp",
+            "badge_text": ""
+          }
+        },
+        "testimonial_YgG9RT": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Sarah M.",
+            "review_title": "Love it",
+            "review_text": "Omg the material and stretch is so damn good. I was worried about the camel toe but it turns out so good I don't have to worry about it anymore 😊 love it so much. Thank you 😊",
+            "review_image": "shopify://shop_images/473Wx593H-469620157-purple-MODEL4.avif",
+            "badge_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_hiFkYe",
+        "testimonial_fb8NC4",
+        "testimonial_YgG9RT"
+      ],
+      "name": "Testimonial Carousel",
+      "settings": {
+        "heading": "HEAR IT FROM OUR KICA CHICAS!",
+        "show_rating": true,
+        "rating_value": 4.5,
+        "review_count": "1590",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "moving_promo_banner_JdeD3F": {
+      "type": "moving-promo-banner",
+      "name": "GSAP Marquee Banner",
+      "settings": {
+        "text": "FLAT 10% OFF ON YOUR 1ST ORDER. USE CODE: GETACTIVE",
+        "link": "",
+        "bg_color": "#000000",
+        "text_color": "#ffffff",
+        "font_size": 14,
+        "font_weight": "bold",
+        "padding_y": 12,
+        "gap_width": 50,
+        "speed": 100,
+        "direction": "left",
+        "pause_on_hover": true
+      }
+    },
+    "instagram_feed_7M9iXL": {
+      "type": "instagram-feed",
+      "blocks": {
+        "post_ac6Rxf": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/71dz4K5fweL._SX679.jpg",
+            "link": ""
+          }
+        },
+        "post_hMM3Kg": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Front-Zip-Women_s-High-Impact-Support-Sports-Bra.avif",
+            "link": ""
+          }
+        },
+        "post_zc7cQD": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/W30011152213_24AW1_3.avif",
+            "link": ""
+          }
+        },
+        "post_y7fi64": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/photo-1518310383802-640c2de311b2.jpg",
+            "link": ""
+          }
+        },
+        "post_MPGEA3": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/849rBIUi_c3db4fb9159e401fbddfba194f8e1cec.jpg",
+            "link": ""
+          }
+        },
+        "post_mEQpkF": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/SCULPTSEAMLESSBRA_SEAMLESSSCULPTLEGGING-BLACKMARBLEWBT-A2AYLWLG-BOEZ03.jpg",
+            "link": ""
+          }
+        },
+        "post_j3eRVy": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/Front-Zip-Women_s-High-Impact-Support-Sports-Bra_1.avif",
+            "link": ""
+          }
+        },
+        "post_DwaBnc": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/photo-1544367567-0f2fcb009e0b_7326367f-4a84-45f1-8e72-1678826cae15.jpg",
+            "link": ""
+          }
+        },
+        "post_nRfUQH": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/VELOCITY-Women_s-Running-Tights_2.avif",
+            "link": ""
+          }
+        },
+        "post_j3TYMB": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/IMG_0744_800x_d9ae2ce2-042b-4ce5-a7f6-74148d7ce17d.webp",
+            "link": ""
+          }
+        },
+        "post_Tz6HMW": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/photo-1571019613454-1cb2f99b2d8b.jpg",
+            "link": ""
+          }
+        },
+        "post_XVQxa9": {
+          "type": "post",
+          "settings": {
+            "image": "shopify://shop_images/berry7_8.webp",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "post_ac6Rxf",
+        "post_hMM3Kg",
+        "post_zc7cQD",
+        "post_y7fi64",
+        "post_MPGEA3",
+        "post_mEQpkF",
+        "post_j3eRVy",
+        "post_DwaBnc",
+        "post_nRfUQH",
+        "post_j3TYMB",
+        "post_Tz6HMW",
+        "post_XVQxa9"
+      ],
+      "name": "FlexForm Instagram Grid",
+      "settings": {
+        "heading": "Follow us on Instagram @flexformathletics",
+        "instagram_url": ""
+      }
+    },
+    "trust_bar_9MKzxQ": {
+      "type": "trust-bar",
+      "blocks": {
+        "feature_FW3LfK": {
+          "type": "feature",
+          "settings": {
+            "icon_class": "fa-solid fa-hand-holding-dollar",
+            "text": "Now pay later available"
+          }
+        },
+        "feature_rgRCca": {
+          "type": "feature",
+          "settings": {
+            "icon_class": "fa-solid fa-arrow-rotate-left",
+            "text": "7 days easy returns"
+          }
+        },
+        "feature_hpLD8j": {
+          "type": "feature",
+          "settings": {
+            "icon_class": "fa-solid fa-truck-fast",
+            "text": "Free Shipping"
+          }
+        },
+        "feature_RTUMWe": {
+          "type": "feature",
+          "settings": {
+            "icon_class": "fa-solid fa-users",
+            "text": "2 lakh+ Happy customers"
+          }
+        },
+        "feature_qtyrDG": {
+          "type": "feature",
+          "settings": {
+            "icon_class": "fa-regular fa-circle-check",
+            "text": "Quality Checked"
+          }
+        },
+        "feature_adxQ4w": {
+          "type": "feature",
+          "settings": {
+            "icon_class": "fa-solid fa-hand-holding-dollar",
+            "text": "Buy Now pay later available"
+          }
+        }
+      },
+      "block_order": [
+        "feature_FW3LfK",
+        "feature_rgRCca",
+        "feature_hpLD8j",
+        "feature_RTUMWe",
+        "feature_qtyrDG",
+        "feature_adxQ4w"
+      ],
+      "name": "Trust Features Bar",
+      "settings": {}
+    }
+  },
+  "order": [
+    "gsap_carousel_KAD9kg",
+    "collection_carousel_VTHPCT",
+    "collection_arch_grid_Jexdhz",
+    "section_tabbed_collections_acnxrd",
+    "social_logos_J8JDRR",
+    "section_testimonial_carousel_3nM3Y7",
+    "moving_promo_banner_JdeD3F",
+    "instagram_feed_7M9iXL",
+    "trust_bar_9MKzxQ"
+  ]
+}

@@ -1,0 +1,53 @@
+/* collection-based-image.css */
+
+.collection-based-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.collection-based-image--full-width {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Link wrapper styling */
+.collection-based-image__link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.collection-based-image__link:hover {
+  opacity: 0.95; /* Subtle flash on hover to indicate it's a link */
+}
+
+.collection-based-image__img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.collection-based-image__placeholder {
+  width: 100%;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.collection-based-image__placeholder svg {
+  width: 100px;
+  height: 100px;
+  fill: #cccccc;
+}

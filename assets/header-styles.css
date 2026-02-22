@@ -1,0 +1,242 @@
+/* --- Base Layout --- */
+.header-wrapper {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  position: relative;
+}
+
+.header-wrapper.scrolled {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.page-width {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* --- Top Row: Search | Logo | Icons --- */
+.header__top {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* Left, Center, Right */
+  align-items: center;
+  padding: 15px 0;
+}
+
+/* 1. Search Bar Styling */
+.header__search-container {
+  justify-self: start;
+  width: 100%;
+  max-width: 300px;
+}
+
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-form__input {
+  width: 100%;
+  padding: 10px 10px 10px 35px; /* Space for icon */
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1a1a1a;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.search-form__input:focus {
+  outline: none;
+  border-color: #1a1a1a;
+}
+
+.search-form__button {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #1a1a1a;
+}
+
+/* 2. Logo Styling */
+.header__logo {
+  justify-self: center;
+  text-align: center;
+}
+
+.header__heading-logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 3. Icons Styling */
+.header__icons {
+  justify-self: end;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header__icon {
+  color: #1a1a1a;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-count-bubble {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  height: 16px;
+  min-width: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* --- Bottom Row: Navigation --- */
+.header__bottom {
+  border-top: 1px solid #f0f0f0;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+}
+
+.header__menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.header__menu-link {
+  display: block;
+  padding: 15px 0;
+  color: #4a4a4a;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.header__menu-link:hover,
+.header__menu-link--active {
+  color: #1a1a1a;
+}
+
+.header__menu-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #1a1a1a;
+  transition: width 0.3s;
+}
+
+.header__menu-item:hover .header__menu-link::after {
+  width: 100%;
+}
+
+/* --- Mega Menu (Collections w/ Images) --- */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid #e5e5e5;
+  padding: 40px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.header__menu-item.has-mega-menu:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mega-menu__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Force 5 columns for your 5 collections */
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-menu__item {
+  text-align: center;
+}
+
+.mega-menu__link-card {
+  text-decoration: none;
+  color: #1a1a1a;
+  display: block;
+}
+
+.mega-menu__image-wrapper {
+  overflow: hidden;
+  margin-bottom: 12px;
+  background: #f4f4f4;
+  aspect-ratio: 3/4; /* Vertical portrait ratio for activewear */
+}
+
+.mega-menu__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.mega-menu__link-card:hover .mega-menu__img {
+  transform: scale(1.05);
+}
+
+.mega-menu__label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 990px) {
+  .header__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__search-container, .header__bottom {
+    display: none; /* Hide desktop nav/search on mobile */
+  }
+  /* You would usually add a hamburger menu toggle here */
+}

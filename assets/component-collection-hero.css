@@ -1,0 +1,52 @@
+/* component-collection-hero.css */
+
+.collection-hero {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.collection-hero__image-wrapper {
+  width: 100%;
+  display: block;
+  line-height: 0; /* Removes the tiny white gap below images */
+  overflow: hidden;
+}
+
+.collection-hero__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hide mobile image by default on desktop */
+.collection-hero__image--mobile {
+  display: none;
+}
+
+/* Responsive Rules */
+@media screen and (max-width: 749px) {
+  /* If a mobile image is provided, hide the desktop image */
+  .hide-mobile {
+    display: none !important;
+  }
+  
+  /* Show the mobile image */
+  .collection-hero__image--mobile {
+    display: block;
+  }
+}
+
+/* Fallback for the visually-hidden class if your theme doesn't have it */
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  word-wrap: normal !important;
+}

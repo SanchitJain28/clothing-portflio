@@ -1,0 +1,115 @@
+{{ 'section-faq.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'section-faq.js' | asset_url }}" defer="defer"></script>
+
+<div class="flexform-faq-section">
+  <h2 class="flexform-faq-title">{{ section.settings.title }}</h2>
+
+  <div class="flexform-faq-container">
+    {%- for block in section.blocks -%}
+      <div class="faq-item" {{ block.shopify_attributes }}>
+
+        <!-- Question Button -->
+        <button class="faq-trigger" aria-expanded="false">
+          <span>
+            <span class="faq-q-prefix">Q:</span>
+            {{ block.settings.question }}
+          </span>
+        <!-- Optional Plus/Minus Icon could go here, but image shows text only -->
+        </button>
+
+        <!-- Answer Content -->
+        <div class="faq-content">
+          <div class="faq-answer-text">
+            {{ block.settings.answer }}
+          </div>
+        </div>
+
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "FAQ Section",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Heading",
+        "default": "FAQs"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "faq_item",
+        "name": "Question",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question",
+            "default": "How do I choose the right size?"
+          },
+          {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Answer",
+            "default": "<p>We recommend checking our Size Guide located on every product page. If you prefer a compressive fit for high-impact workouts, stick to your true size. For a relaxed fit, size up.</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FlexForm FAQs",
+        "blocks": [
+          {
+            "type": "faq_item",
+            "settings": {
+              "question": "How do I choose the right size of activewear leggings?",
+              "answer": "<p>Our leggings are designed for a second-skin fit. Check the size chart on the product page. For our <strong>Sculpt & Lift</strong> collection, we recommend sticking to your true size for maximum compression.</p>"
+            }
+          },
+          {
+            "type": "faq_item",
+            "settings": {
+              "question": "What fabric should I look for in activewear leggings?",
+              "answer": "<p>Look for moisture-wicking, 4-way stretch blends. Our signature <strong>FlexTech™</strong> fabric (75% Nylon, 25% Spandex) ensures breathability while being 100% squat-proof.</p>"
+            }
+          },
+          {
+            "type": "faq_item",
+            "settings": {
+              "question": "Are there specific leggings for different types of workouts?",
+              "answer": "<p>Yes! Shop by Activity in our menu. Use our <strong>High-Compression</strong> leggings for running and HIIT, and our <strong>Soft-Touch</strong> series for Yoga and Pilates.</p>"
+            }
+          },
+          {
+            "type": "faq_item",
+            "settings": {
+              "question": "How do I find leggings that are squat-proof and not see-through?",
+              "answer": "<p>All FlexForm bottoms undergo rigorous opacity testing. We guarantee our leggings are squat-proof, so you can workout with confidence.</p>"
+            }
+          },
+          {
+            "type": "faq_item",
+            "settings": {
+              "question": "What features should I consider for maximum comfort?",
+              "answer": "<p>Look for a seamless waistband, flat-lock seams to prevent chafing, and a gusseted crotch for freedom of movement—standard features in all our products.</p>"
+            }
+          },
+          {
+            "type": "faq_item",
+            "settings": {
+              "question": "How do I style activewear leggings for everyday wear?",
+              "answer": "<p>Our designs are versatile. Pair our black high-waisted leggings with an oversized hoodie and sneakers for a chic athleisure look.</p>"
+            }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

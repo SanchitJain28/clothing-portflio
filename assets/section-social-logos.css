@@ -1,0 +1,76 @@
+/* Social Logos Section Styling */
+.social-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+  width: 100%;
+  overflow: hidden; /* Hides overflow for carousel effect */
+  position: relative;
+  text-align: center;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Heading - Made Bigger */
+.social-heading {
+  font-family: inherit;
+  font-size: 2.4rem; /* Increased size */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 3.5rem 0; /* More space below heading */
+}
+
+/* Container */
+.social-container {
+  display: flex;
+  flex-wrap: nowrap; /* Forces single row */
+  align-items: center;
+  justify-content: flex-start; /* Start from left */
+  gap: 8rem; /* Wide gap between big icons */
+  width: max-content; /* Allow width to expand */
+  padding: 0 4rem;
+  will-change: transform;
+}
+
+/* Individual Item */
+.social-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+/* Icon Styling - Made Bigger */
+.social-icon {
+  font-size: 5rem; /* Very large icons (approx 80px) */
+  color: #333333; /* Dark Charcoal */
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.social-item:hover .social-icon {
+  color: #9caf88; /* Sage Green accent from your palette */
+  transform: scale(1.1);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .social-section {
+    padding: 3rem 0;
+  }
+  
+  .social-heading {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .social-container {
+    gap: 5rem; 
+  }
+  
+  .social-icon {
+    font-size: 3.5rem; /* Slightly smaller on mobile but still big */
+  }
+}

@@ -1,0 +1,109 @@
+{{ 'section-trust-bar.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'section-trust-bar.js' | asset_url }}" defer="defer"></script>
+
+<div class="trust-bar-section">
+  <div class="trust-bar-container">
+    {%- for block in section.blocks -%}
+      <div class="trust-item" {{ block.shopify_attributes }}>
+        <div class="trust-icon-wrapper">
+          <!-- Icon rendering using Font Awesome Class -->
+          <i class="{{ block.settings.icon_class }} trust-icon"></i>
+        </div>
+        <p class="trust-text">
+          {{ block.settings.text }}
+        </p>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Trust Features Bar",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "feature",
+        "name": "Feature Item",
+        "settings": [
+          {
+            "type": "text",
+            "id": "icon_class",
+            "label": "Font Awesome Class",
+            "default": "fa-solid fa-truck",
+            "info": "e.g. 'fa-solid fa-truck'. [Search Icons](https://fontawesome.com/search?o=r&m=free)"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Free Shipping"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Trust Features Bar",
+        "blocks": [
+          {
+            "type": "feature",
+            "settings": {
+              "icon_class": "fa-solid fa-hand-holding-dollar",
+              "text": "Now pay later available"
+            }
+          },
+          {
+            "type": "feature",
+            "settings": {
+              "icon_class": "fa-solid fa-arrow-rotate-left",
+              "text": "7 days easy returns"
+            }
+          },
+          {
+            "type": "feature",
+            "settings": {
+              "icon_class": "fa-solid fa-truck-fast",
+              "text": "Free Shipping"
+            }
+          },
+          {
+            "type": "feature",
+            "settings": {
+              "icon_class": "fa-solid fa-users",
+              "text": "2 lakh+ Happy customers"
+            }
+          },
+          {
+            "type": "feature",
+            "settings": {
+              "icon_class": "fa-regular fa-circle-check",
+              "text": "Quality Checked"
+            }
+          },
+          {
+            "type": "feature",
+            "settings": {
+              "icon_class": "fa-solid fa-hand-holding-dollar",
+              "text": "Buy Now pay later available"
+            }
+          },
+          {
+            "type": "feature",
+            "settings": {
+              "icon_class": "fa-solid fa-arrow-rotate-left",
+              "text": "7 days easy returns"
+            }
+          },
+          {
+            "type": "feature",
+            "settings": {
+              "icon_class": "fa-solid fa-truck-fast",
+              "text": "Free Shipping"
+            }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

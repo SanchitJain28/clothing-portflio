@@ -1,0 +1,130 @@
+{{ 'product-features-bar.css' | asset_url | stylesheet_tag }}
+
+<section class="product-features-bar" {{ block.shopify_attributes }}>
+  <div class="pfb-container page-width">
+
+    <!-- 1. INTENSITY SLIDER -->
+    <div class="pfb-slider-wrapper">
+      <div class="pfb-slider-track">
+        <!-- The position of this circle is controlled by the schema setting -->
+        <div class="pfb-slider-thumb" style="left: {{ section.settings.intensity_level }}%;"></div>
+      </div>
+      <div class="pfb-slider-labels">
+        <span class="pfb-label pfb-label--left">{{ section.settings.label_1 }}</span>
+        <span class="pfb-label pfb-label--center">{{ section.settings.label_2 }}</span>
+        <span class="pfb-label pfb-label--right">{{ section.settings.label_3 }}</span>
+      </div>
+    </div>
+
+    <!-- 2. FEATURES GRID -->
+    <div class="pfb-grid">
+      {% for block in section.blocks %}
+        <div class="pfb-grid-item" {{ block.shopify_attributes }}>
+          <div class="pfb-icon-wrapper">
+            {% if block.settings.custom_icon != blank %}
+              <img
+                src="{{ block.settings.custom_icon | img_url: '150x' }}"
+                alt="{{ block.settings.title | escape }}"
+                loading="lazy"
+                class="pfb-icon-image">
+            {% else %}
+              <!-- Shopify placeholder if no image is uploaded yet -->
+              {{ 'image' | placeholder_svg_tag: 'pfb-placeholder-svg' }}
+            {% endif %}
+          </div>
+          <h4 class="pfb-feature-title">{{ block.settings.title }}</h4>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Product Features Bar",
+    "settings": [
+      {
+        "type": "range",
+        "id": "intensity_level",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "label": "Slider Position",
+        "default": 100,
+        "info": "0 = Left, 50 = Center, 100 = Right"
+      },
+      {
+        "type": "text",
+        "id": "label_1",
+        "label": "Left Label",
+        "default": "Everyday"
+      },
+      {
+        "type": "text",
+        "id": "label_2",
+        "label": "Center Label",
+        "default": "Yoga"
+      },
+      {
+        "type": "text",
+        "id": "label_3",
+        "label": "Right Label",
+        "default": "HIIT"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "feature",
+        "name": "Feature",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "custom_icon",
+            "label": "Icon Image",
+            "info": "Upload a transparent PNG for the exact illustration."
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Feature Title",
+            "default": "Feature Name"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Features Bar",
+        "blocks": [
+          {
+            "type": "feature",
+            "settings": {
+              "title": "No Camel Toe Show"
+            }
+          },
+          {
+            "type": "feature",
+            "settings": {
+              "title": "Anti-Slip And Anti-Roll"
+            }
+          },
+          {
+            "type": "feature",
+            "settings": {
+              "title": "Squat Proof"
+            }
+          },
+          {
+            "type": "feature",
+            "settings": {
+              "title": "4-Way Stretch"
+            }
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

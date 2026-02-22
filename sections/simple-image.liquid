@@ -1,0 +1,41 @@
+{{ 'simple-image.css' | asset_url | stylesheet_tag }}
+
+<section class="simple-image-section {% if section.settings.full_width %}simple-image-section--full-width{% else %}page-width{% endif %}">
+  {% if section.settings.image != blank %}
+    <img
+      src="{{ section.settings.image | image_url: width: 2000 }}"
+      alt="{{ section.settings.image.alt | default: shop.name | escape }}"
+      class="simple-image__img"
+      loading="lazy"
+      width="{{ section.settings.image.width }}"
+      height="{{ section.settings.image.height }}">
+  {% else %}
+    <div class="simple-image__placeholder-wrapper">
+      {{ 'image' | placeholder_svg_tag: 'simple-image__placeholder' }}
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+  {
+    "name": "Simple Image",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Make image full screen width",
+        "default": true
+      }
+    ],
+    "presets": [
+      {
+        "name": "Simple Image"
+      }
+    ]
+  }
+{% endschema %}

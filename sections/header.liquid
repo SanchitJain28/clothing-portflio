@@ -1,0 +1,117 @@
+{{ 'custom-header.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+
+<div class="custom-header-wrapper color-{{ section.settings.color_scheme }}">
+  <header class="custom-header">
+    <!-- TOP ROW: Search - Logo - Icons -->
+    <div class="custom-top-row">
+      <!-- LEFT: Search -->
+      <div class="custom-search-area">
+        {% render 'custom-search' %}
+      </div>
+
+      <!-- MOBILE TRIGGER -->
+      <div class="custom-mobile-trigger">
+        {% render 'header-drawer' %}
+      </div>
+
+      <!-- CENTER: Logo -->
+      <div class="custom-logo-area">
+        <a href="{{ routes.root_url }}" class="custom-logo-link">
+          {%- if settings.logo != blank -%}
+            {{ settings.logo | image_url: width: 600 | image_tag: class: 'custom-logo-img', alt: shop.name }}
+          {%- else -%}
+            <span class="custom-logo-text">{{ shop.name }}</span>
+          {%- endif -%}
+        </a>
+      </div>
+
+      <!-- RIGHT: Icons -->
+      <div class="custom-icons-area">
+        {%- if shop.customer_accounts_enabled -%}
+          <a href="{{ routes.account_url }}" class="custom-icon-btn" aria-label="Account">
+            <svg class="custom-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </a>
+        {%- endif -%}
+
+        <a href="{{ routes.cart_url }}" class="custom-icon-btn" id="cart-icon-bubble" aria-label="Cart">
+          <svg class="custom-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          {%- if cart != empty and cart.item_count > 0 -%}
+            <div class="custom-cart-count">{{ cart.item_count }}</div>
+          {%- endif -%}
+        </a>
+      </div>
+    </div>
+
+    <!-- NAVIGATION ROW: All Collections -->
+    <div class="custom-nav-row">
+      <nav class="custom-nav">
+        <ul class="custom-menu-list">
+          {%- for collection in collections -%}
+            {%- unless collection.handle == 'frontpage' -%}
+              <li class="custom-menu-item">
+                <a href="{{ collection.url }}" class="custom-menu-link">
+                  {{ collection.title }}
+                </a>
+              </li>
+            {%- endunless -%}
+          {%- endfor -%}
+        </ul>
+      </nav>
+    </div>
+
+    <!-- COLLECTIONS GRID: Icon Style -->
+    {%- unless request.page_type == 'product' -%}
+      <div class="custom-collections-grid">
+        <div class="custom-collections-inner">
+          {%- for collection in collections -%}
+            {%- unless collection.handle == 'frontpage' -%}
+              <a href="{{ collection.url }}" class="custom-collection-item">
+                <div class="custom-collection-image-box">
+                  {%- if collection.image -%}
+                    {{
+                      collection.image
+                      | image_url: width: 150
+                      | image_tag: class: 'custom-collection-img', alt: collection.title
+                    }}
+                  {%- elsif collection.products.first.featured_image -%}
+                    {{
+                      collection.products.first.featured_image
+                      | image_url: width: 150
+                      | image_tag: class: 'custom-collection-img', alt: collection.title
+                    }}
+                  {%- else -%}
+                    <div class="custom-collection-img" style="background:#f5f5f5;"></div>
+                  {%- endif -%}
+                </div>
+                <span class="custom-collection-title">{{ collection.title }}</span>
+              </a>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endunless -%}
+  </header>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Header",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1"
+    }
+  ]
+}
+{% endschema %}

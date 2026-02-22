@@ -1,0 +1,2118 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "edition_label_JJh9ee": {
+          "type": "edition_label",
+          "settings": {
+            "text": "FlexForm Athletics Edition"
+          }
+        },
+        "star_rating_yXTCAF": {
+          "type": "star_rating",
+          "settings": {
+            "review_count": "1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "features_icon_with_text_GnhrGD": {
+          "type": "features_icon_with_text",
+          "settings": {
+            "icon_1": "shopify://shop_images/breathable-1_1500x_bbc7e455-9169-4b05-af90-3825ddbe4037.avif",
+            "text_1": "Comfort",
+            "icon_2": "shopify://shop_images/ff_1500x_c59f7585-dadd-4951-9b5f-1ac435b982f0.avif",
+            "text_2": "Breathable",
+            "icon_3": "shopify://shop_images/cotton_1500x_15d56a63-45e5-4778-bbca-c1a7deeca914.png",
+            "text_3": "Cotton",
+            "icon_4": "shopify://shop_images/comfort_1500x_4a387d20-f43b-4786-9a25-2c6be783f1cc.avif",
+            "text_4": "Super Soft"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "benefits_icon_with_text_DhFeW9": {
+          "type": "benefits_icon_with_text",
+          "settings": {
+            "text_1": "<p>COD<br/>available</p>",
+            "text_2": "<p>7 Days Return and<br/>Exchange</p>",
+            "text_3": "<p>Pan India Delivery</p>",
+            "offer_text": "Offer For You",
+            "offer_content": "<p>Get 10% off on orders above 2000. Use code: KICA10</p>"
+          }
+        },
+        "product_offers_gAL4mw": {
+          "type": "product_offers",
+          "settings": {
+            "heading": "Offers For You",
+            "offer_1_code": "GETACTIVE",
+            "offer_1_desc": "<p>Additional <strong>10% off</strong> on minimum purchase of Rs. 1,599. Available on your <strong>1st Purchase only</strong>.</p>",
+            "offer_2_code": "FLEXSET",
+            "offer_2_desc": "<p>Buy any <strong>2 items</strong> (Leggings + Top) to complete your set and get <strong>15% OFF</strong> instantly.</p>",
+            "offer_3_code": "FREESHIP",
+            "offer_3_desc": "<p>Get <strong>Free Express Shipping</strong> on all prepaid orders. No minimum purchase required.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "edition_label_JJh9ee",
+        "star_rating_yXTCAF",
+        "price",
+        "features_icon_with_text_GnhrGD",
+        "variant_picker",
+        "buy_buttons",
+        "benefits_icon_with_text_DhFeW9",
+        "product_offers_gAL4mw"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "product_details_grid_brQ3nY": {
+      "type": "product-details-grid",
+      "name": "Product Details Grid",
+      "settings": {}
+    },
+    "collection_based_image_zy6yjU": {
+      "type": "collection-based-image",
+      "blocks": {
+        "collection_rule_npQ7Fh": {
+          "type": "collection_rule",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection_rule_hyVUVt": {
+          "type": "collection_rule",
+          "settings": {
+            "collection": "recovery-lounge",
+            "image": "shopify://shop_images/Accessories_and_essienrilas.png"
+          }
+        },
+        "collection_rule_4WXHLF": {
+          "type": "collection_rule",
+          "settings": {
+            "collection": "outerwear-layers",
+            "image": "shopify://shop_images/3_9e54561f-633f-4da5-a5d0-f072344976d3.png"
+          }
+        },
+        "collection_rule_Pi8Q9L": {
+          "type": "collection_rule",
+          "settings": {
+            "collection": "new-arrivals",
+            "image": "shopify://shop_images/Accessories_and_essienrilas_1.png"
+          }
+        },
+        "collection_rule_wnE7pq": {
+          "type": "collection_rule",
+          "settings": {
+            "collection": "leggings",
+            "image": "shopify://shop_images/Artboard_6.webp"
+          }
+        },
+        "collection_rule_hkNfpJ": {
+          "type": "collection_rule",
+          "settings": {
+            "collection": "best-sellers",
+            "image": "shopify://shop_images/Bestseller-banner_web.webp"
+          }
+        },
+        "collection_rule_kA8qcN": {
+          "type": "collection_rule",
+          "settings": {
+            "collection": "athleisure-sets",
+            "image": "shopify://shop_images/2_d8e0d04c-0b39-49d8-98ae-71790756dd21.png"
+          }
+        },
+        "collection_rule_FmAWJi": {
+          "type": "collection_rule",
+          "settings": {
+            "collection": "accessories-essentials",
+            "image": "shopify://shop_images/1.png"
+          }
+        }
+      },
+      "block_order": [
+        "collection_rule_npQ7Fh",
+        "collection_rule_hyVUVt",
+        "collection_rule_4WXHLF",
+        "collection_rule_Pi8Q9L",
+        "collection_rule_wnE7pq",
+        "collection_rule_hkNfpJ",
+        "collection_rule_kA8qcN",
+        "collection_rule_FmAWJi"
+      ],
+      "name": "Collection Based Image",
+      "settings": {
+        "fallback_link": "",
+        "full_width": true
+      }
+    },
+    "product_features_bar_T6JjR9": {
+      "type": "product-features-bar",
+      "blocks": {
+        "feature_gfgTX4": {
+          "type": "feature",
+          "settings": {
+            "custom_icon": "shopify://shop_images/Screenshot_2026-02-22_at_4.38.48_PM-Photoroom.png",
+            "title": "No Camel Toe Show"
+          }
+        },
+        "feature_Hhdc4R": {
+          "type": "feature",
+          "settings": {
+            "custom_icon": "shopify://shop_images/Screenshot_2026-02-22_at_4.38.57_PM-Photoroom.png",
+            "title": "Anti-Slip And Anti-Roll"
+          }
+        },
+        "feature_4bGgA9": {
+          "type": "feature",
+          "settings": {
+            "custom_icon": "shopify://shop_images/Screenshot_2026-02-22_at_4.39.07_PM-Photoroom.png",
+            "title": "Squat Proof"
+          }
+        },
+        "feature_zxM9jt": {
+          "type": "feature",
+          "settings": {
+            "custom_icon": "shopify://shop_images/Screenshot_2026-02-22_at_4.39.13_PM-Photoroom.png",
+            "title": "4-Way Stretch"
+          }
+        }
+      },
+      "block_order": [
+        "feature_gfgTX4",
+        "feature_Hhdc4R",
+        "feature_4bGgA9",
+        "feature_zxM9jt"
+      ],
+      "name": "Product Features Bar",
+      "settings": {
+        "intensity_level": 75,
+        "label_1": "Everyday",
+        "label_2": "Yoga",
+        "label_3": "HIIT"
+      }
+    },
+    "worn_by_you_ckarLa": {
+      "type": "worn-by-you",
+      "blocks": {
+        "ugc_image_qUEDnE": {
+          "type": "ugc_image",
+          "settings": {
+            "image": "shopify://shop_images/71gYL3PQLhL._SY879.jpg",
+            "handle": "@sanaabanana_",
+            "link": ""
+          }
+        },
+        "ugc_image_XNeWXe": {
+          "type": "ugc_image",
+          "settings": {
+            "image": "shopify://shop_images/415KaTIXURL.jpg",
+            "handle": "@ladylolita__",
+            "link": ""
+          }
+        },
+        "ugc_image_iFLzJG": {
+          "type": "ugc_image",
+          "settings": {
+            "image": "shopify://shop_images/71Ksu6FY8kL._SX679.jpg",
+            "handle": "@shikhamehra",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "ugc_image_qUEDnE",
+        "ugc_image_XNeWXe",
+        "ugc_image_iFLzJG"
+      ],
+      "name": "Worn By You",
+      "settings": {
+        "heading": "WORN BY YOU"
+      }
+    },
+    "faq_section_zFaY4d": {
+      "type": "faq-section",
+      "blocks": {
+        "faq_item_44VgK4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I choose the right size of activewear leggings?",
+            "answer": "<p>Our leggings are designed for a second-skin fit. Check the size chart on the product page. For our <strong>Sculpt & Lift</strong> collection, we recommend sticking to your true size for maximum compression.</p>"
+          }
+        },
+        "faq_item_JXCrfL": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What fabric should I look for in activewear leggings?",
+            "answer": "<p>Look for moisture-wicking, 4-way stretch blends. Our signature <strong>FlexTech™</strong> fabric (75% Nylon, 25% Spandex) ensures breathability while being 100% squat-proof.</p>"
+          }
+        },
+        "faq_item_HkeKqK": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are there specific leggings for different types of workouts?",
+            "answer": "<p>Yes! Shop by Activity in our menu. Use our <strong>High-Compression</strong> leggings for running and HIIT, and our <strong>Soft-Touch</strong> series for Yoga and Pilates.</p>"
+          }
+        },
+        "faq_item_KQfRAE": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I find leggings that are squat-proof and not see-through?",
+            "answer": "<p>All FlexForm bottoms undergo rigorous opacity testing. We guarantee our leggings are squat-proof, so you can workout with confidence.</p>"
+          }
+        },
+        "faq_item_CeFEYV": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What features should I consider for maximum comfort?",
+            "answer": "<p>Look for a seamless waistband, flat-lock seams to prevent chafing, and a gusseted crotch for freedom of movement—standard features in all our products.</p>"
+          }
+        },
+        "faq_item_nae8Hh": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I style activewear leggings for everyday wear?",
+            "answer": "<p>Our designs are versatile. Pair our black high-waisted leggings with an oversized hoodie and sneakers for a chic athleisure look.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_44VgK4",
+        "faq_item_JXCrfL",
+        "faq_item_HkeKqK",
+        "faq_item_KQfRAE",
+        "faq_item_CeFEYV",
+        "faq_item_nae8Hh"
+      ],
+      "name": "FlexForm FAQs",
+      "settings": {
+        "title": "FAQs"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "product_reviews_qLhKdN": {
+      "type": "product-reviews",
+      "blocks": {
+        "review_dcnfyN": {
+          "type": "review",
+          "settings": {
+            "author_name": "Søren Lundqvist",
+            "verified_buyer": true,
+            "review_date": "2 days ago",
+            "rating": 5,
+            "review_title": "Tactile Perfection",
+            "review_text": "The weight of the stone in the Kitchen & Dining collection is significant. It feels like an heirloom piece rather than a disposable accessory. Truly captures the Scandi essence.",
+            "product_variant": "Kitchen & Dining - Stone",
+            "show_helpful": true,
+            "helpful_yes": 14,
+            "helpful_no": 0
+          }
+        },
+        "review_fQLMWH": {
+          "type": "review",
+          "settings": {
+            "author_name": "Elina Berg",
+            "verified_buyer": true,
+            "review_date": "5 days ago",
+            "rating": 5,
+            "review_title": "Quiet Luxury",
+            "review_text": "I purchased the Wool throw from the Bedroom Retreat. The weave is tight and the color (Dove Grey) is exactly as pictured. It adds a layer of calm to my morning routine.",
+            "product_variant": "Bedroom Retreat - Wool",
+            "show_helpful": true,
+            "helpful_yes": 22,
+            "helpful_no": 1
+          }
+        },
+        "review_zmX4aD": {
+          "type": "review",
+          "settings": {
+            "author_name": "Lukas Nielsen",
+            "verified_buyer": true,
+            "review_date": "1 week ago",
+            "rating": 4,
+            "review_title": "Beautiful, but substantial",
+            "review_text": "The Walnut desk organizer is stunning. My only note is that it is larger than I anticipated—make sure to measure your desk space. The finish is buttery smooth.",
+            "product_variant": "Home Office - Walnut",
+            "show_helpful": true,
+            "helpful_yes": 8,
+            "helpful_no": 2
+          }
+        },
+        "review_UPWqTX": {
+          "type": "review",
+          "settings": {
+            "author_name": "Freja Holm",
+            "verified_buyer": true,
+            "review_date": "1 week ago",
+            "rating": 5,
+            "review_title": "The Art of Living",
+            "review_text": "Maison Luxe has mastered the balance between utility and art. The Glass accessories catch the morning light beautifully. Packaging was eco-conscious and secure.",
+            "product_variant": "Living Essentials - Clear",
+            "show_helpful": true,
+            "helpful_yes": 31,
+            "helpful_no": 0
+          }
+        },
+        "review_JHGThT": {
+          "type": "review",
+          "settings": {
+            "author_name": "Mats Engström",
+            "verified_buyer": true,
+            "review_date": "2 weeks ago",
+            "rating": 5,
+            "review_title": "Minimalist Dream",
+            "review_text": "I've tried many Scandinavian brands, but the 'Ash' finish here is superior. No yellow undertones, just clean, cool-toned wood that fits my living essentials perfectly.",
+            "product_variant": "Living Essentials - Ash",
+            "show_helpful": true,
+            "helpful_yes": 19,
+            "helpful_no": 0
+          }
+        },
+        "review_haA7f4": {
+          "type": "review",
+          "settings": {
+            "author_name": "Astrid Lind",
+            "verified_buyer": true,
+            "review_date": "2 weeks ago",
+            "rating": 5,
+            "review_title": "Morning Ritual Enhanced",
+            "review_text": "The ceramic set from the Kitchen collection has a matte texture that is so satisfying to hold. It has completely transformed my coffee ritual.",
+            "product_variant": "Kitchen & Dining - Clay",
+            "show_helpful": true,
+            "helpful_yes": 12,
+            "helpful_no": 0
+          }
+        },
+        "review_CirW6A": {
+          "type": "review",
+          "settings": {
+            "author_name": "Henrik Vestergaard",
+            "verified_buyer": true,
+            "review_date": "3 weeks ago",
+            "rating": 2,
+            "review_title": "Delayed but Divine",
+            "review_text": "The product itself (Matte Black steel) is 5-star quality, but shipping to my region took nearly three weeks. For a premium price, I expected faster logistics.",
+            "product_variant": "Home Office - Matte Black",
+            "show_helpful": true,
+            "helpful_yes": 45,
+            "helpful_no": 12
+          }
+        },
+        "review_8nm3PF": {
+          "type": "review",
+          "settings": {
+            "author_name": "Solveig Jansson",
+            "verified_buyer": true,
+            "review_date": "3 weeks ago",
+            "rating": 5,
+            "review_title": "Winter Glow Indeed",
+            "review_text": "The Seasonal Edit is always my favorite. The Winter Glow scent and vessel are breathtaking. It fills the room without being overpowering.",
+            "product_variant": "Seasonal Edit - Winter Glow",
+            "show_helpful": true,
+            "helpful_yes": 27,
+            "helpful_no": 1
+          }
+        },
+        "review_WTjnWc": {
+          "type": "review",
+          "settings": {
+            "author_name": "Björn Arvidsson",
+            "verified_buyer": true,
+            "review_date": "1 month ago",
+            "rating": 5,
+            "review_title": "Solid Leather Craft",
+            "review_text": "The leather desk mat has developed a beautiful patina already. You can smell the quality the moment you open the box. Highly recommended for any serious home office.",
+            "product_variant": "Home Office - Leather",
+            "show_helpful": true,
+            "helpful_yes": 15,
+            "helpful_no": 0
+          }
+        },
+        "review_wrQUjk": {
+          "type": "review",
+          "settings": {
+            "author_name": "Maja Sundqvist",
+            "verified_buyer": false,
+            "review_date": "1 month ago",
+            "rating": 4,
+            "review_title": "Gifted Perfection",
+            "review_text": "I received the Brass candle holder as a gift. It's heavier than it looks and very stable. A true statement piece for my dining table.",
+            "product_variant": "Kitchen & Dining - Brass",
+            "show_helpful": true,
+            "helpful_yes": 6,
+            "helpful_no": 0
+          }
+        },
+        "review_V6gK4N": {
+          "type": "review",
+          "settings": {
+            "author_name": "Oskar Dahl",
+            "verified_buyer": true,
+            "review_date": "1 month ago",
+            "rating": 3,
+            "review_title": "Color Variance",
+            "review_text": "I ordered the 'Sage' essentials. In natural light, it looks more like a muted grey-green than the bright sage on the site. Still lovely, but unexpected.",
+            "product_variant": "Living Essentials - Sage",
+            "show_helpful": true,
+            "helpful_yes": 38,
+            "helpful_no": 4
+          }
+        },
+        "review_DhMdnJ": {
+          "type": "review",
+          "settings": {
+            "author_name": "Ingrid Foss",
+            "verified_buyer": true,
+            "review_date": "1 month ago",
+            "rating": 5,
+            "review_title": "Understated Elegance",
+            "review_text": "Maison Luxe understands that less is more. The linen sheets in Sand are breathable and get softer with every wash. My bedroom retreat is finally complete.",
+            "product_variant": "Bedroom Retreat - Sand",
+            "show_helpful": true,
+            "helpful_yes": 52,
+            "helpful_no": 2
+          }
+        },
+        "review_6kcgzU": {
+          "type": "review",
+          "settings": {
+            "author_name": "Kasper Thorne",
+            "verified_buyer": true,
+            "review_date": "2 months ago",
+            "rating": 5,
+            "review_title": "Professional Edge",
+            "review_text": "Upgraded my office with the Graphite collection. The metallic finish is sophisticated and professional. This is exactly what a modern executive office needs.",
+            "product_variant": "Home Office - Graphite",
+            "show_helpful": true,
+            "helpful_yes": 9,
+            "helpful_no": 0
+          }
+        },
+        "review_6LPUUD": {
+          "type": "review",
+          "settings": {
+            "author_name": "Signe Nyberg",
+            "verified_buyer": true,
+            "review_date": "2 months ago",
+            "rating": 5,
+            "review_title": "The Perfect Weight",
+            "review_text": "There is a specific joy in using well-made tools. The copper kitchen accents have a weight that speaks to their durability. Functional art at its best.",
+            "product_variant": "Kitchen & Dining - Copper",
+            "show_helpful": true,
+            "helpful_yes": 14,
+            "helpful_no": 1
+          }
+        },
+        "review_cwXfam": {
+          "type": "review",
+          "settings": {
+            "author_name": "Erik Solberg",
+            "verified_buyer": true,
+            "review_date": "2 months ago",
+            "rating": 5,
+            "review_title": "Timeless Aesthetic",
+            "review_text": "The Oak shelving system is surprisingly easy to install and looks integrated into the wall. The grain is gorgeous and consistent.",
+            "product_variant": "Home Office - Oak",
+            "show_helpful": true,
+            "helpful_yes": 21,
+            "helpful_no": 0
+          }
+        },
+        "review_gkwrV3": {
+          "type": "review",
+          "settings": {
+            "author_name": "Lovisa Ek",
+            "verified_buyer": true,
+            "review_date": "3 months ago",
+            "rating": 1,
+            "review_title": "Arrived Damaged",
+            "review_text": "My Marble board arrived cracked. I'm sure the product is great, but the shipping carrier must have been rough. Waiting for a replacement from support.",
+            "product_variant": "Kitchen & Dining - Marble",
+            "show_helpful": true,
+            "helpful_yes": 18,
+            "helpful_no": 3
+          }
+        },
+        "review_fGMcTK": {
+          "type": "review",
+          "settings": {
+            "author_name": "Jonas Blom",
+            "verified_buyer": true,
+            "review_date": "3 months ago",
+            "rating": 5,
+            "review_title": "Worth the Investment",
+            "review_text": "Yes, it's more expensive than mass-market brands, but the difference is in the details. The seams on the silk pillowcases are nearly invisible.",
+            "product_variant": "Bedroom Retreat - Silk",
+            "show_helpful": true,
+            "helpful_yes": 41,
+            "helpful_no": 2
+          }
+        },
+        "review_Ap87Lf": {
+          "type": "review",
+          "settings": {
+            "author_name": "Klara Svendsen",
+            "verified_buyer": true,
+            "review_date": "3 months ago",
+            "rating": 4,
+            "review_title": "Great Seasonal Addition",
+            "review_text": "The Autumn collection brings such a cozy warmth to the home. I wish the scent lasted a bit longer, but the aesthetic is 10/10.",
+            "product_variant": "Seasonal Edit - Autumn",
+            "show_helpful": true,
+            "helpful_yes": 7,
+            "helpful_no": 0
+          }
+        },
+        "review_zn6ead": {
+          "type": "review",
+          "settings": {
+            "author_name": "Magnus Heiberg",
+            "verified_buyer": true,
+            "review_date": "4 months ago",
+            "rating": 5,
+            "review_title": "Steel and Soul",
+            "review_text": "The steel desk lamp is a masterpiece of industrial Scandi design. The dimming feature is smooth and the light temperature is perfect for focus.",
+            "product_variant": "Home Office - Steel",
+            "show_helpful": true,
+            "helpful_yes": 13,
+            "helpful_no": 0
+          }
+        },
+        "review_jetiGf": {
+          "type": "review",
+          "settings": {
+            "author_name": "Ebba Lindgren",
+            "verified_buyer": true,
+            "review_date": "4 months ago",
+            "rating": 5,
+            "review_title": "Pure Serenity",
+            "review_text": "I've turned my guest room into a 'Bedroom Retreat' using exclusively Maison Luxe items. Every guest has commented on how calm the space feels.",
+            "product_variant": "Bedroom Retreat - Cream",
+            "show_helpful": true,
+            "helpful_yes": 29,
+            "helpful_no": 1
+          }
+        },
+        "review_8LC7Kz": {
+          "type": "review",
+          "settings": {
+            "author_name": "Axel Torkelsen",
+            "verified_buyer": true,
+            "review_date": "5 months ago",
+            "rating": 5,
+            "review_title": "Charcoal Sophistication",
+            "review_text": "The Charcoal ceramics are the perfect moody addition to my kitchen. They have a slight texture that makes them feel very organic and handmade.",
+            "product_variant": "Kitchen & Dining - Charcoal",
+            "show_helpful": true,
+            "helpful_yes": 11,
+            "helpful_no": 0
+          }
+        },
+        "review_RQzD7c": {
+          "type": "review",
+          "settings": {
+            "author_name": "Malin Grönberg",
+            "verified_buyer": true,
+            "review_date": "5 months ago",
+            "rating": 5,
+            "review_title": "Summer Vibes",
+            "review_text": "The Summer Edit brings the Scandinavian archipelago into my living room. Light, airy, and beautifully crafted. Shipping was incredibly fast.",
+            "product_variant": "Seasonal Edit - Summer",
+            "show_helpful": true,
+            "helpful_yes": 5,
+            "helpful_no": 0
+          }
+        },
+        "review_PmzHGC": {
+          "type": "review",
+          "settings": {
+            "author_name": "Gustav Iversen",
+            "verified_buyer": true,
+            "review_date": "6 months ago",
+            "rating": 5,
+            "review_title": "The Golden Standard",
+            "review_text": "The Gold accents in the Living Essentials line are not gaudy. They are a soft, brushed gold that looks incredibly expensive and tasteful.",
+            "product_variant": "Living Essentials - Gold",
+            "show_helpful": true,
+            "helpful_yes": 16,
+            "helpful_no": 1
+          }
+        },
+        "review_B3h9L9": {
+          "type": "review",
+          "settings": {
+            "author_name": "Tove Hellström",
+            "verified_buyer": true,
+            "review_date": "6 months ago",
+            "rating": 4,
+            "review_title": "Quality over Quantity",
+            "review_text": "I am slowly replacing all my home goods with pieces from here. The Silver candle snuffers are weighted and perfectly balanced.",
+            "product_variant": "Living Essentials - Silver",
+            "show_helpful": true,
+            "helpful_yes": 8,
+            "helpful_no": 0
+          }
+        },
+        "review_TyAyef": {
+          "type": "review",
+          "settings": {
+            "author_name": "Niels Rasmussen",
+            "verified_buyer": true,
+            "review_date": "7 months ago",
+            "rating": 5,
+            "review_title": "Ironclad Quality",
+            "review_text": "The Iron trivets are heavy-duty and look like they belong in a high-end restaurant. Very happy with the Kitchen & Dining selection.",
+            "product_variant": "Kitchen & Dining - Iron",
+            "show_helpful": true,
+            "helpful_yes": 10,
+            "helpful_no": 0
+          }
+        },
+        "review_tMbVmL": {
+          "type": "review",
+          "settings": {
+            "author_name": "Elin Larsson",
+            "verified_buyer": true,
+            "review_date": "7 months ago",
+            "rating": 5,
+            "review_title": "Nature in the Home",
+            "review_text": "The Pine accessories from the Living line smell faintly of a forest and look stunning against my white walls. A beautiful natural touch.",
+            "product_variant": "Living Essentials - Pine",
+            "show_helpful": true,
+            "helpful_yes": 23,
+            "helpful_no": 2
+          }
+        },
+        "review_iWTCDr": {
+          "type": "review",
+          "settings": {
+            "author_name": "Felix Sørensen",
+            "verified_buyer": true,
+            "review_date": "8 months ago",
+            "rating": 5,
+            "review_title": "Midnight Mood",
+            "review_text": "The Midnight variant is a deep, rich navy that looks incredible in low light. The quality of the finish is flawless. No streaks or bubbles.",
+            "product_variant": "Living Essentials - Midnight",
+            "show_helpful": true,
+            "helpful_yes": 14,
+            "helpful_no": 0
+          }
+        },
+        "review_BdmPgK": {
+          "type": "review",
+          "settings": {
+            "author_name": "Moa Andersson",
+            "verified_buyer": true,
+            "review_date": "8 months ago",
+            "rating": 5,
+            "review_title": "Spring Awakening",
+            "review_text": "Exactly the refresh my home needed. The Spring Edit is full of light textures and optimistic design. Maison Luxe never misses the mark.",
+            "product_variant": "Seasonal Edit - Spring",
+            "show_helpful": true,
+            "helpful_yes": 6,
+            "helpful_no": 0
+          }
+        },
+        "review_6UdBTr": {
+          "type": "review",
+          "settings": {
+            "author_name": "Viggo Mortensen",
+            "verified_buyer": true,
+            "review_date": "9 months ago",
+            "rating": 5,
+            "review_title": "Executive Feel",
+            "review_text": "The Bronze accents for my home office have given it a much-needed upgrade. The material is authentic and has a lovely cool temperature.",
+            "product_variant": "Home Office - Bronze",
+            "show_helpful": true,
+            "helpful_yes": 18,
+            "helpful_no": 1
+          }
+        },
+        "review_mkdQkM": {
+          "type": "review",
+          "settings": {
+            "author_name": "Ida Björk",
+            "verified_buyer": true,
+            "review_date": "9 months ago",
+            "rating": 5,
+            "review_title": "The Fall Edit",
+            "review_text": "Rich, earthy tones and cozy textures. The Fall collection is their best yet. The wood grain on the serving boards is exceptional.",
+            "product_variant": "Seasonal Edit - Fall",
+            "show_helpful": true,
+            "helpful_yes": 12,
+            "helpful_no": 0
+          }
+        },
+        "review_pVrqKw": {
+          "type": "review",
+          "settings": {
+            "author_name": "Markus Henriksen",
+            "verified_buyer": true,
+            "review_date": "10 months ago",
+            "rating": 4,
+            "review_title": "Simple and Chic",
+            "review_text": "The white office accessories are clean and minimal. They help reduce visual clutter, which helps my productivity significantly.",
+            "product_variant": "Home Office - White",
+            "show_helpful": true,
+            "helpful_yes": 25,
+            "helpful_no": 3
+          }
+        },
+        "review_9aBpet": {
+          "type": "review",
+          "settings": {
+            "author_name": "Sara Lindgren",
+            "verified_buyer": true,
+            "review_date": "10 months ago",
+            "rating": 5,
+            "review_title": "Linen Love",
+            "review_text": "The Linen variants are the highest quality I've found. They have that perfect 'crinkled' luxury look without feeling scratchy.",
+            "product_variant": "Bedroom Retreat - Linen",
+            "show_helpful": true,
+            "helpful_yes": 33,
+            "helpful_no": 0
+          }
+        },
+        "review_TeyMJj": {
+          "type": "review",
+          "settings": {
+            "author_name": "Thomas Öberg",
+            "verified_buyer": true,
+            "review_date": "11 months ago",
+            "rating": 5,
+            "review_title": "Stone Cold Class",
+            "review_text": "The stone coasters are heavy and have felt bottoms to protect the table. Small details like that make Maison Luxe stand out.",
+            "product_variant": "Living Essentials - Stone",
+            "show_helpful": true,
+            "helpful_yes": 15,
+            "helpful_no": 0
+          }
+        },
+        "review_qxxJJB": {
+          "type": "review",
+          "settings": {
+            "author_name": "Emma Gustafsson",
+            "verified_buyer": true,
+            "review_date": "11 months ago",
+            "rating": 5,
+            "review_title": "Smoke and Mirrors",
+            "review_text": "The 'Smoke' glass color is so sophisticated. It's not too dark, just a perfect translucent grey that looks amazing with white candles.",
+            "product_variant": "Living Essentials - Smoke",
+            "show_helpful": true,
+            "helpful_yes": 19,
+            "helpful_no": 1
+          }
+        },
+        "review_HUii9X": {
+          "type": "review",
+          "settings": {
+            "author_name": "Arvid Knudsen",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 5,
+            "review_title": "Built to Last",
+            "review_text": "I've had the Walnut desk for a year now and it still looks brand new. The oil finish is easy to maintain and ages beautifully.",
+            "product_variant": "Home Office - Walnut",
+            "show_helpful": true,
+            "helpful_yes": 48,
+            "helpful_no": 0
+          }
+        },
+        "review_jR8mHr": {
+          "type": "review",
+          "settings": {
+            "author_name": "Britt Wallin",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 4,
+            "review_title": "Cozy Winter",
+            "review_text": "The Winter Glow collection is a staple in our house every December. I only wish they offered a larger size for the candles.",
+            "product_variant": "Seasonal Edit - Winter Glow",
+            "show_helpful": true,
+            "helpful_yes": 14,
+            "helpful_no": 2
+          }
+        },
+        "review_TeGTXk": {
+          "type": "review",
+          "settings": {
+            "author_name": "Johan Holmgren",
+            "verified_buyer": true,
+            "review_date": "1 week ago",
+            "rating": 5,
+            "review_title": "The Benchmark of Quality",
+            "review_text": "The Oak desk tray is milled from a single piece of wood. The grain continuity is flawless. It’s expensive, but you can feel where the money went.",
+            "product_variant": "Home Office - Oak",
+            "show_helpful": true,
+            "helpful_yes": 18,
+            "helpful_no": 1
+          }
+        },
+        "review_AtMEPw": {
+          "type": "review",
+          "settings": {
+            "author_name": "Annika Sørensen",
+            "verified_buyer": true,
+            "review_date": "2 weeks ago",
+            "rating": 5,
+            "review_title": "Breathtakingly Simple",
+            "review_text": "Maison Luxe understands whitespace. The clear glass vases are so thin yet feel durable. They disappear into the room until the light hits them.",
+            "product_variant": "Living Essentials - Clear",
+            "show_helpful": true,
+            "helpful_yes": 12,
+            "helpful_no": 0
+          }
+        },
+        "review_iUgpgk": {
+          "type": "review",
+          "settings": {
+            "author_name": "Mikael Lind",
+            "verified_buyer": true,
+            "review_date": "3 weeks ago",
+            "rating": 4,
+            "review_title": "Premium Feel",
+            "review_text": "The weight of the Marble serving board is impressive. It stays cool, which is perfect for hosting. Deducting one star only because the delivery box was slightly oversized for the item.",
+            "product_variant": "Kitchen & Dining - Marble",
+            "show_helpful": true,
+            "helpful_yes": 9,
+            "helpful_no": 2
+          }
+        },
+        "review_qz3WbY": {
+          "type": "review",
+          "settings": {
+            "author_name": "Linnea Ekström",
+            "verified_buyer": true,
+            "review_date": "1 month ago",
+            "rating": 5,
+            "review_title": "Softness Redefined",
+            "review_text": "I transitioned my whole bedroom retreat to the Silk collection. It’s like sleeping on a cloud. The Dove Grey is a very sophisticated, muted tone.",
+            "product_variant": "Bedroom Retreat - Dove Grey",
+            "show_helpful": true,
+            "helpful_yes": 34,
+            "helpful_no": 1
+          }
+        },
+        "review_VpBYUp": {
+          "type": "review",
+          "settings": {
+            "author_name": "Anders Vang",
+            "verified_buyer": true,
+            "review_date": "1 month ago",
+            "rating": 5,
+            "review_title": "Industrial Elegance",
+            "review_text": "The Steel collection has a matte finish that doesn't show fingerprints easily. It has modernized my office space instantly. Clean lines, zero clutter.",
+            "product_variant": "Home Office - Steel",
+            "show_helpful": true,
+            "helpful_yes": 21,
+            "helpful_no": 0
+          }
+        },
+        "review_UM8dw4": {
+          "type": "review",
+          "settings": {
+            "author_name": "Birgit Nilsson",
+            "verified_buyer": true,
+            "review_date": "1 month ago",
+            "rating": 3,
+            "review_title": "Smaller than expected",
+            "review_text": "The Clay ceramics are beautiful, but the bowls were smaller than I imagined based on the photos. Excellent for small servings, but check dimensions.",
+            "product_variant": "Kitchen & Dining - Clay",
+            "show_helpful": true,
+            "helpful_yes": 42,
+            "helpful_no": 5
+          }
+        },
+        "review_tdCFc4": {
+          "type": "review",
+          "settings": {
+            "author_name": "Lars Jacobsen",
+            "verified_buyer": true,
+            "review_date": "2 months ago",
+            "rating": 5,
+            "review_title": "The Perfect Gift",
+            "review_text": "I bought the Brass candle set for a housewarming. The packaging was so premium I didn't even need to wrap it. It was the star of the night.",
+            "product_variant": "Living Essentials - Gold",
+            "show_helpful": true,
+            "helpful_yes": 15,
+            "helpful_no": 0
+          }
+        },
+        "review_mfPRWf": {
+          "type": "review",
+          "settings": {
+            "author_name": "Karin Heikkinen",
+            "verified_buyer": true,
+            "review_date": "2 months ago",
+            "rating": 5,
+            "review_title": "Authentic Linen",
+            "review_text": "You can tell this is authentic flax linen. It has that characteristic weight and texture that only improves with time. Worth every penny for the bedroom.",
+            "product_variant": "Bedroom Retreat - Linen",
+            "show_helpful": true,
+            "helpful_yes": 27,
+            "helpful_no": 1
+          }
+        },
+        "review_8pYk7W": {
+          "type": "review",
+          "settings": {
+            "author_name": "Sven Torp",
+            "verified_buyer": true,
+            "review_date": "3 months ago",
+            "rating": 4,
+            "review_title": "Sturdy and Sleek",
+            "review_text": "The Iron trivets are much heavier than they look. They protect my dining table while looking like sculptural art pieces when not in use.",
+            "product_variant": "Kitchen & Dining - Iron",
+            "show_helpful": true,
+            "helpful_yes": 11,
+            "helpful_no": 0
+          }
+        },
+        "review_MJbmTg": {
+          "type": "review",
+          "settings": {
+            "author_name": "Maja Lund",
+            "verified_buyer": true,
+            "review_date": "3 months ago",
+            "rating": 5,
+            "review_title": "Spring in a Box",
+            "review_text": "The Spring Edit is so refreshing. The textures are light and the color palette is incredibly calming. It has breathed new life into my living room.",
+            "product_variant": "Seasonal Edit - Spring",
+            "show_helpful": true,
+            "helpful_yes": 19,
+            "helpful_no": 0
+          }
+        },
+        "review_ADmC7c": {
+          "type": "review",
+          "settings": {
+            "author_name": "Olof Gunnarsson",
+            "verified_buyer": true,
+            "review_date": "4 months ago",
+            "rating": 2,
+            "review_title": "Long Lead Time",
+            "review_text": "The Walnut desk mat is spectacular, but I had to wait 4 weeks for it to be back in stock. If you're in a rush, look elsewhere. If you want quality, wait.",
+            "product_variant": "Home Office - Walnut",
+            "show_helpful": true,
+            "helpful_yes": 56,
+            "helpful_no": 8
+          }
+        },
+        "review_bNzrJQ": {
+          "type": "review",
+          "settings": {
+            "author_name": "Astrid Björklund",
+            "verified_buyer": true,
+            "review_date": "4 months ago",
+            "rating": 5,
+            "review_title": "The Smell of Luxury",
+            "review_text": "The Pine essentials give off such a subtle, natural scent. It’s not synthetic at all—it just smells like a fresh Scandinavian morning.",
+            "product_variant": "Living Essentials - Pine",
+            "show_helpful": true,
+            "helpful_yes": 23,
+            "helpful_no": 1
+          }
+        },
+        "review_NkJPbM": {
+          "type": "review",
+          "settings": {
+            "author_name": "Henrik Møller",
+            "verified_buyer": true,
+            "review_date": "5 months ago",
+            "rating": 5,
+            "review_title": "Matte Perfection",
+            "review_text": "I’m obsessed with the Matte Black accessories. They have a powdery finish that feels so premium to the touch. It makes my home office feel very curated.",
+            "product_variant": "Home Office - Matte Black",
+            "show_helpful": true,
+            "helpful_yes": 14,
+            "helpful_no": 0
+          }
+        },
+        "review_Y9PR9g": {
+          "type": "review",
+          "settings": {
+            "author_name": "Solveig Kristiansen",
+            "verified_buyer": true,
+            "review_date": "5 months ago",
+            "rating": 5,
+            "review_title": "Cozy Autumn",
+            "review_text": "The Autumn Edit brought such warmth to my home. The burnt orange and deep browns are rich but still fit within a minimalist aesthetic.",
+            "product_variant": "Seasonal Edit - Autumn",
+            "show_helpful": true,
+            "helpful_yes": 8,
+            "helpful_no": 0
+          }
+        },
+        "review_HA9wi4": {
+          "type": "review",
+          "settings": {
+            "author_name": "Jonas Bergqvist",
+            "verified_buyer": true,
+            "review_date": "6 months ago",
+            "rating": 5,
+            "review_title": "Exceptional Support",
+            "review_text": "The glass in my order arrived shattered, but Maison Luxe sent a replacement the next day with no questions asked. Fantastic service for a fantastic product.",
+            "product_variant": "Living Essentials - Smoke",
+            "show_helpful": true,
+            "helpful_yes": 31,
+            "helpful_no": 2
+          }
+        },
+        "review_TzkWHm": {
+          "type": "review",
+          "settings": {
+            "author_name": "Ebba Holm",
+            "verified_buyer": true,
+            "review_date": "6 months ago",
+            "rating": 4,
+            "review_title": "Tactile Stone",
+            "review_text": "The Stone coasters are very heavy and look great on a light wood table. One of them had a slight chip on the bottom, but it doesn't affect the look.",
+            "product_variant": "Kitchen & Dining - Stone",
+            "show_helpful": true,
+            "helpful_yes": 5,
+            "helpful_no": 1
+          }
+        },
+        "review_7gVCTL": {
+          "type": "review",
+          "settings": {
+            "author_name": "Axel Nielsen",
+            "verified_buyer": true,
+            "review_date": "7 months ago",
+            "rating": 5,
+            "review_title": "Woolen Warmth",
+            "review_text": "This Wool throw is the centerpiece of my bedroom retreat. It’s thick, warm, and doesn’t pill. Exactly what I needed for the winter months.",
+            "product_variant": "Bedroom Retreat - Wool",
+            "show_helpful": true,
+            "helpful_yes": 19,
+            "helpful_no": 0
+          }
+        },
+        "review_G3wDzX": {
+          "type": "review",
+          "settings": {
+            "author_name": "Lovisa Sandahl",
+            "verified_buyer": true,
+            "review_date": "7 months ago",
+            "rating": 5,
+            "review_title": "Simply Stunning",
+            "review_text": "I ordered the 'Ash' variant for my living essentials. The color is so light and airy—it makes the whole room feel larger. True Scandinavian design.",
+            "product_variant": "Living Essentials - Ash",
+            "show_helpful": true,
+            "helpful_yes": 14,
+            "helpful_no": 0
+          }
+        },
+        "review_q4ndLF": {
+          "type": "review",
+          "settings": {
+            "author_name": "Fredrik Skov",
+            "verified_buyer": true,
+            "review_date": "8 months ago",
+            "rating": 5,
+            "review_title": "Copper Craft",
+            "review_text": "The Copper kitchen accents add a warm glow to the kitchen. They are highly polished and haven't tarnished at all after several months of use.",
+            "product_variant": "Kitchen & Dining - Copper",
+            "show_helpful": true,
+            "helpful_yes": 22,
+            "helpful_no": 1
+          }
+        },
+        "review_EQakmw": {
+          "type": "review",
+          "settings": {
+            "author_name": "Signe Iversen",
+            "verified_buyer": true,
+            "review_date": "8 months ago",
+            "rating": 5,
+            "review_title": "Modern Classic",
+            "review_text": "The Leather desk mat in Charcoal is the perfect surface for writing. It feels firm yet supple. It has completely elevated my workspace.",
+            "product_variant": "Home Office - Leather",
+            "show_helpful": true,
+            "helpful_yes": 11,
+            "helpful_no": 0
+          }
+        },
+        "review_pVxDRe": {
+          "type": "review",
+          "settings": {
+            "author_name": "Elin Blomqvist",
+            "verified_buyer": true,
+            "review_date": "9 months ago",
+            "rating": 5,
+            "review_title": "Winter Glow",
+            "review_text": "Every time I light the Winter Glow candle, it feels like a cozy cabin. The vessel itself is so beautiful I will definitely repurpose it later.",
+            "product_variant": "Seasonal Edit - Winter Glow",
+            "show_helpful": true,
+            "helpful_yes": 13,
+            "helpful_no": 0
+          }
+        },
+        "review_T4Tx3b": {
+          "type": "review",
+          "settings": {
+            "author_name": "Morten Dahl",
+            "verified_buyer": true,
+            "review_date": "9 months ago",
+            "rating": 1,
+            "review_title": "Wrong Item Sent",
+            "review_text": "I ordered the Oak set but received the Walnut one instead. It's beautiful, but it doesn't match my floor. Customer service is fixing it now.",
+            "product_variant": "Home Office - Oak",
+            "show_helpful": true,
+            "helpful_yes": 28,
+            "helpful_no": 4
+          }
+        },
+        "review_iitaYD": {
+          "type": "review",
+          "settings": {
+            "author_name": "Ingrid Thomsen",
+            "verified_buyer": true,
+            "review_date": "10 months ago",
+            "rating": 5,
+            "review_title": "Sophisticated Sand",
+            "review_text": "The 'Sand' linen is the perfect neutral. It's not too yellow or too grey. It looks incredibly expensive and feels even better against the skin.",
+            "product_variant": "Bedroom Retreat - Sand",
+            "show_helpful": true,
+            "helpful_yes": 17,
+            "helpful_no": 0
+          }
+        },
+        "review_QYcA9D": {
+          "type": "review",
+          "settings": {
+            "author_name": "Kasper Ljungberg",
+            "verified_buyer": true,
+            "review_date": "10 months ago",
+            "rating": 5,
+            "review_title": "Art for the Counter",
+            "review_text": "These aren't just kitchen tools; they are conversation starters. Everyone who visits asks where I got my Marble and Iron set. Outstanding.",
+            "product_variant": "Kitchen & Dining - Marble",
+            "show_helpful": true,
+            "helpful_yes": 9,
+            "helpful_no": 0
+          }
+        },
+        "review_C3jQqn": {
+          "type": "review",
+          "settings": {
+            "author_name": "Sofia Hansen",
+            "verified_buyer": true,
+            "review_date": "11 months ago",
+            "rating": 5,
+            "review_title": "Charcoal Chic",
+            "review_text": "The Charcoal ceramics have a depth of color that is hard to capture in photos. They are matte, moody, and absolutely gorgeous.",
+            "product_variant": "Living Essentials - Charcoal",
+            "show_helpful": true,
+            "helpful_yes": 21,
+            "helpful_no": 1
+          }
+        },
+        "review_RNKa3M": {
+          "type": "review",
+          "settings": {
+            "author_name": "Lukas Wallin",
+            "verified_buyer": true,
+            "review_date": "11 months ago",
+            "rating": 4,
+            "review_title": "Graphite Greatness",
+            "review_text": "The Graphite desk organizer is very modern. It has a nice weight to it so it doesn't slide around. Just wish it had one more compartment.",
+            "product_variant": "Home Office - Graphite",
+            "show_helpful": true,
+            "helpful_yes": 6,
+            "helpful_no": 0
+          }
+        },
+        "review_VKgB9B": {
+          "type": "review",
+          "settings": {
+            "author_name": "Hanna Ek",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 5,
+            "review_title": "The Only Brand I Use",
+            "review_text": "I’ve slowly filled my home with Maison Luxe. The quality across all categories—from Bedroom to Kitchen—is consistently world-class.",
+            "product_variant": "Living Essentials - Clear",
+            "show_helpful": true,
+            "helpful_yes": 45,
+            "helpful_no": 2
+          }
+        },
+        "review_hWxXgz": {
+          "type": "review",
+          "settings": {
+            "author_name": "Søren Pontoppidan",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 5,
+            "review_title": "Executive Quality",
+            "review_text": "The Bronze accents for my home office are subtle but powerful. They have a timeless quality that won't go out of style next season.",
+            "product_variant": "Home Office - Bronze",
+            "show_helpful": true,
+            "helpful_yes": 12,
+            "helpful_no": 0
+          }
+        },
+        "review_wcphG7": {
+          "type": "review",
+          "settings": {
+            "author_name": "Tove Berg",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 5,
+            "review_title": "Pure Summer",
+            "review_text": "The Summer Edit is light, breezy, and beautiful. It perfectly captures that Nordic summer feeling that I wanted for my guest house.",
+            "product_variant": "Seasonal Edit - Summer",
+            "show_helpful": true,
+            "helpful_yes": 8,
+            "helpful_no": 0
+          }
+        },
+        "review_LQq8E6": {
+          "type": "review",
+          "settings": {
+            "author_name": "Erik Lindgren",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 5,
+            "review_title": "Brass Brilliance",
+            "review_text": "The Brass items are solid, not plated. You can feel the quality in the weight. They add just the right amount of luxury to the dining room.",
+            "product_variant": "Kitchen & Dining - Brass",
+            "show_helpful": true,
+            "helpful_yes": 16,
+            "helpful_no": 1
+          }
+        },
+        "review_wHTmFe": {
+          "type": "review",
+          "settings": {
+            "author_name": "Klara Svendsen",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 5,
+            "review_title": "The Perfect White",
+            "review_text": "It’s hard to find the right shade of white, but Maison Luxe nailed it. It’s clean and crisp without being clinical. Perfect for my office.",
+            "product_variant": "Home Office - White",
+            "show_helpful": true,
+            "helpful_yes": 22,
+            "helpful_no": 0
+          }
+        },
+        "review_chzyG3": {
+          "type": "review",
+          "settings": {
+            "author_name": "Viggo Holm",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 4,
+            "review_title": "Sophisticated Sage",
+            "review_text": "The Sage essentials are very calming. The color is slightly more muted than the website photos, which I actually prefer. Very tasteful.",
+            "product_variant": "Living Essentials - Sage",
+            "show_helpful": true,
+            "helpful_yes": 9,
+            "helpful_no": 1
+          }
+        },
+        "review_YLLr7P": {
+          "type": "review",
+          "settings": {
+            "author_name": "Malin Arvidsson",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 5,
+            "review_title": "Silk Dreams",
+            "review_text": "I can never go back to cotton. The Silk pillowcases have improved my sleep and my skin. A true luxury that is worth the cost.",
+            "product_variant": "Bedroom Retreat - Silk",
+            "show_helpful": true,
+            "helpful_yes": 37,
+            "helpful_no": 2
+          }
+        },
+        "review_eV6NaH": {
+          "type": "review",
+          "settings": {
+            "author_name": "Gustav Persson",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 5,
+            "review_title": "Midnight Masterpiece",
+            "review_text": "The Midnight variant is stunningly deep. It looks incredible paired with light wood furniture. The finish is smooth and completely even.",
+            "product_variant": "Living Essentials - Midnight",
+            "show_helpful": true,
+            "helpful_yes": 14,
+            "helpful_no": 0
+          }
+        },
+        "review_PANd9p": {
+          "type": "review",
+          "settings": {
+            "author_name": "Ida Nyberg",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 5,
+            "review_title": "The Fall Feeling",
+            "review_text": "I love how Maison Luxe interprets the seasons. The Fall Edit isn't cheesy; it's sophisticated, earthy, and perfectly minimal.",
+            "product_variant": "Seasonal Edit - Fall",
+            "show_helpful": true,
+            "helpful_yes": 11,
+            "helpful_no": 0
+          }
+        },
+        "review_xznYC7": {
+          "type": "review",
+          "settings": {
+            "author_name": "Markus Henriksen",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 5,
+            "review_title": "Steel Focus",
+            "review_text": "The Steel desk lamp is the best functional piece I own. The light is focused and the design is so sharp it makes my whole desk look better.",
+            "product_variant": "Home Office - Steel",
+            "show_helpful": true,
+            "helpful_yes": 18,
+            "helpful_no": 1
+          }
+        },
+        "review_Ez3Bpa": {
+          "type": "review",
+          "settings": {
+            "author_name": "Lars Vestergaard",
+            "verified_buyer": true,
+            "review_date": "2 days ago",
+            "rating": 5,
+            "review_title": "Heirloom Quality",
+            "review_text": "The Oak desk organizer is solid wood through and through. In an era of veneers, Maison Luxe is a breath of fresh air. This will last decades.",
+            "product_variant": "Home Office - Oak",
+            "show_helpful": true,
+            "helpful_yes": 12,
+            "helpful_no": 1
+          }
+        },
+        "review_qFQge3": {
+          "type": "review",
+          "settings": {
+            "author_name": "Inge Sørensen",
+            "verified_buyer": true,
+            "review_date": "4 days ago",
+            "rating": 5,
+            "review_title": "Divine Texture",
+            "review_text": "The linen in the 'Sand' colorway is incredible. It has that characteristic weight that keeps you cool in summer and warm in winter. Truly premium.",
+            "product_variant": "Bedroom Retreat - Sand",
+            "show_helpful": true,
+            "helpful_yes": 8,
+            "helpful_no": 0
+          }
+        },
+        "review_TrBVcg": {
+          "type": "review",
+          "settings": {
+            "author_name": "Morten Lindberg",
+            "verified_buyer": true,
+            "review_date": "1 week ago",
+            "rating": 4,
+            "review_title": "Minimalist Utility",
+            "review_text": "Beautiful form. The Matte Black finish is flawless. It’s a bit smaller than I imagined, but it forced me to declutter, which I actually appreciate.",
+            "product_variant": "Home Office - Matte Black",
+            "show_helpful": true,
+            "helpful_yes": 15,
+            "helpful_no": 2
+          }
+        },
+        "review_d8knND": {
+          "type": "review",
+          "settings": {
+            "author_name": "Solveig Bakke",
+            "verified_buyer": true,
+            "review_date": "1 week ago",
+            "rating": 5,
+            "review_title": "Kitchen Centerpiece",
+            "review_text": "The Stone mortar and pestle is so heavy it doesn't move an inch while in use. It looks like a sculpture on my countertop.",
+            "product_variant": "Kitchen & Dining - Stone",
+            "show_helpful": true,
+            "helpful_yes": 22,
+            "helpful_no": 0
+          }
+        },
+        "review_BcdEzc": {
+          "type": "review",
+          "settings": {
+            "author_name": "Björn Ekström",
+            "verified_buyer": true,
+            "review_date": "2 weeks ago",
+            "rating": 5,
+            "review_title": "The Smoke Glass is Stunning",
+            "review_text": "I bought the entire Smoke set for my living room. The way they interact with candlelight is mesmerizing. Very sophisticated and moody.",
+            "product_variant": "Living Essentials - Smoke",
+            "show_helpful": true,
+            "helpful_yes": 19,
+            "helpful_no": 1
+          }
+        },
+        "review_VJYMN6": {
+          "type": "review",
+          "settings": {
+            "author_name": "Maja Nygaard",
+            "verified_buyer": true,
+            "review_date": "2 weeks ago",
+            "rating": 5,
+            "review_title": "Winter Glow",
+            "review_text": "The Seasonal Edit never disappoints. The Winter Glow scent is crisp and natural, like a walk through a pine forest after snowfall.",
+            "product_variant": "Seasonal Edit - Winter Glow",
+            "show_helpful": true,
+            "helpful_yes": 11,
+            "helpful_no": 0
+          }
+        },
+        "review_Qmnrtm": {
+          "type": "review",
+          "settings": {
+            "author_name": "Henrik Svendsen",
+            "verified_buyer": true,
+            "review_date": "3 weeks ago",
+            "rating": 5,
+            "review_title": "Ash Perfection",
+            "review_text": "Finding cool-toned ash wood is difficult. Usually, it's too yellow. This 'Ash' variant is perfectly neutral and fits my Scandi-style living room perfectly.",
+            "product_variant": "Living Essentials - Ash",
+            "show_helpful": true,
+            "helpful_yes": 7,
+            "helpful_no": 0
+          }
+        },
+        "review_tjMPBi": {
+          "type": "review",
+          "settings": {
+            "author_name": "Astrid Kjellberg",
+            "verified_buyer": true,
+            "review_date": "3 weeks ago",
+            "rating": 4,
+            "review_title": "Soft but Delicate",
+            "review_text": "The silk is beautiful but requires careful washing. Definitely a luxury item for those who appreciate fine materials. The Dove Grey is a dream.",
+            "product_variant": "Bedroom Retreat - Dove Grey",
+            "show_helpful": true,
+            "helpful_yes": 25,
+            "helpful_no": 3
+          }
+        },
+        "review_FAFgTE": {
+          "type": "review",
+          "settings": {
+            "author_name": "Lukas Holm",
+            "verified_buyer": true,
+            "review_date": "1 month ago",
+            "rating": 5,
+            "review_title": "Professional Edge",
+            "review_text": "The Graphite steel organizers are the best addition to my office this year. They are sturdy, slide-resistant, and look incredibly sharp.",
+            "product_variant": "Home Office - Graphite",
+            "show_helpful": true,
+            "helpful_yes": 14,
+            "helpful_no": 0
+          }
+        },
+        "review_agQia9": {
+          "type": "review",
+          "settings": {
+            "author_name": "Freja Larsson",
+            "verified_buyer": true,
+            "review_date": "1 month ago",
+            "rating": 5,
+            "review_title": "Simply Beautiful",
+            "review_text": "The clear glass carafes have a weight to the base that feels very intentional. Beautiful design that elevates a simple glass of water.",
+            "product_variant": "Living Essentials - Clear",
+            "show_helpful": true,
+            "helpful_yes": 9,
+            "helpful_no": 0
+          }
+        },
+        "review_Mi6xnJ": {
+          "type": "review",
+          "settings": {
+            "author_name": "Oskar Thomsen",
+            "verified_buyer": true,
+            "review_date": "1 month ago",
+            "rating": 2,
+            "review_title": "Shipping Delay",
+            "review_text": "I love the brass candle holders, but they took 18 days to arrive in Stockholm. For this price point, I expected priority shipping.",
+            "product_variant": "Kitchen & Dining - Brass",
+            "show_helpful": true,
+            "helpful_yes": 32,
+            "helpful_no": 14
+          }
+        },
+        "review_jG4dGn": {
+          "type": "review",
+          "settings": {
+            "author_name": "Signe Berg",
+            "verified_buyer": true,
+            "review_date": "2 months ago",
+            "rating": 5,
+            "review_title": "Morning Ritual",
+            "review_text": "The clay ceramics have a hand-thrown feel that makes every morning coffee feel special. The matte finish is very grounding.",
+            "product_variant": "Kitchen & Dining - Clay",
+            "show_helpful": true,
+            "helpful_yes": 18,
+            "helpful_no": 0
+          }
+        },
+        "review_3b9mWf": {
+          "type": "review",
+          "settings": {
+            "author_name": "Kasper Nielsen",
+            "verified_buyer": true,
+            "review_date": "2 months ago",
+            "rating": 5,
+            "review_title": "Solid Brass",
+            "review_text": "Unlike other brands, this isn't plated. It’s solid, heavy brass that will age beautifully. You can feel the quality the moment you touch it.",
+            "product_variant": "Kitchen & Dining - Brass",
+            "show_helpful": true,
+            "helpful_yes": 13,
+            "helpful_no": 1
+          }
+        },
+        "review_nx8M7p": {
+          "type": "review",
+          "settings": {
+            "author_name": "Elin Sundqvist",
+            "verified_buyer": true,
+            "review_date": "2 months ago",
+            "rating": 5,
+            "review_title": "Sage Sanctuary",
+            "review_text": "The Sage color is so muted and peaceful. It has turned my living room into a sanctuary. Fast shipping and eco-friendly packaging too.",
+            "product_variant": "Living Essentials - Sage",
+            "show_helpful": true,
+            "helpful_yes": 21,
+            "helpful_no": 0
+          }
+        },
+        "review_wFDTyN": {
+          "type": "review",
+          "settings": {
+            "author_name": "Anders Dahl",
+            "verified_buyer": true,
+            "review_date": "3 months ago",
+            "rating": 5,
+            "review_title": "Unmatched Quality",
+            "review_text": "I’ve purchased from high-end boutiques in Copenhagen and Maison Luxe is right there with the best of them. The walnut grain is stunning.",
+            "product_variant": "Home Office - Walnut",
+            "show_helpful": true,
+            "helpful_yes": 16,
+            "helpful_no": 0
+          }
+        },
+        "review_YGV9ML": {
+          "type": "review",
+          "settings": {
+            "author_name": "Lovisa Arvidsson",
+            "verified_buyer": true,
+            "review_date": "3 months ago",
+            "rating": 5,
+            "review_title": "Woolen Bliss",
+            "review_text": "The thick wool weave is so cozy. It doesn't shed at all, which was my biggest worry. It looks like a designer piece on my bed.",
+            "product_variant": "Bedroom Retreat - Wool",
+            "show_helpful": true,
+            "helpful_yes": 27,
+            "helpful_no": 1
+          }
+        },
+        "review_TKU7Pr": {
+          "type": "review",
+          "settings": {
+            "author_name": "Gustav Iversen",
+            "verified_buyer": true,
+            "review_date": "4 months ago",
+            "rating": 5,
+            "review_title": "Steel and Light",
+            "review_text": "The desk lamp is a masterclass in industrial Scandi design. It’s heavy, stable, and the light quality is perfect for late-night focus.",
+            "product_variant": "Home Office - Steel",
+            "show_helpful": true,
+            "helpful_yes": 11,
+            "helpful_no": 0
+          }
+        },
+        "review_7DTtjr": {
+          "type": "review",
+          "settings": {
+            "author_name": "Ida Björk",
+            "verified_buyer": true,
+            "review_date": "4 months ago",
+            "rating": 5,
+            "review_title": "The Spring Edit",
+            "review_text": "Light, airy, and full of life. The Spring collection is exactly what I needed to shake off the winter blues. The pastel tones are perfect.",
+            "product_variant": "Seasonal Edit - Spring",
+            "show_helpful": true,
+            "helpful_yes": 8,
+            "helpful_no": 0
+          }
+        },
+        "review_YmKL8Y": {
+          "type": "review",
+          "settings": {
+            "author_name": "Markus Henriksen",
+            "verified_buyer": true,
+            "review_date": "5 months ago",
+            "rating": 4,
+            "review_title": "Clean White",
+            "review_text": "I love the white office collection. It makes my workspace feel so much larger. I just wish the pencil holder was slightly deeper.",
+            "product_variant": "Home Office - White",
+            "show_helpful": true,
+            "helpful_yes": 14,
+            "helpful_no": 2
+          }
+        },
+        "review_a4NQUY": {
+          "type": "review",
+          "settings": {
+            "author_name": "Sara Lindgren",
+            "verified_buyer": true,
+            "review_date": "5 months ago",
+            "rating": 5,
+            "review_title": "Linen Love",
+            "review_text": "The quality of the linen is superb. It has that lived-in feel from the first wash. The 'Linen' color is the perfect off-white.",
+            "product_variant": "Bedroom Retreat - Linen",
+            "show_helpful": true,
+            "helpful_yes": 31,
+            "helpful_no": 0
+          }
+        },
+        "review_qAEeCU": {
+          "type": "review",
+          "settings": {
+            "author_name": "Thomas Öberg",
+            "verified_buyer": true,
+            "review_date": "6 months ago",
+            "rating": 5,
+            "review_title": "Stone Cold Class",
+            "review_text": "The charcoal stone accessories are heavy and well-finished. They add a great tactile element to my dining table setup.",
+            "product_variant": "Living Essentials - Stone",
+            "show_helpful": true,
+            "helpful_yes": 12,
+            "helpful_no": 0
+          }
+        },
+        "review_JQcdAr": {
+          "type": "review",
+          "settings": {
+            "author_name": "Emma Gustafsson",
+            "verified_buyer": true,
+            "review_date": "6 months ago",
+            "rating": 3,
+            "review_title": "Packaging Issue",
+            "review_text": "The product is 5 stars, but the box arrived quite dented. Thankfully, the items were well-protected inside, but the unboxing was less than 'luxe'.",
+            "product_variant": "Living Essentials - Smoke",
+            "show_helpful": true,
+            "helpful_yes": 44,
+            "helpful_no": 6
+          }
+        },
+        "review_DFwgrG": {
+          "type": "review",
+          "settings": {
+            "author_name": "Arvid Knudsen",
+            "verified_buyer": true,
+            "review_date": "7 months ago",
+            "rating": 5,
+            "review_title": "Oak for Life",
+            "review_text": "The desk shelving has completely changed my workflow. The oak is warm and inviting. It makes sitting down to work a pleasure.",
+            "product_variant": "Home Office - Oak",
+            "show_helpful": true,
+            "helpful_yes": 19,
+            "helpful_no": 1
+          }
+        },
+        "review_GbnmmY": {
+          "type": "review",
+          "settings": {
+            "author_name": "Britt Wallin",
+            "verified_buyer": true,
+            "review_date": "7 months ago",
+            "rating": 5,
+            "review_title": "Autumn Warmth",
+            "review_text": "The earthy tones of the Fall Edit are so rich. They bring a natural warmth into the home that feels very authentic and cozy.",
+            "product_variant": "Seasonal Edit - Fall",
+            "show_helpful": true,
+            "helpful_yes": 15,
+            "helpful_no": 0
+          }
+        },
+        "review_ckG3Hx": {
+          "type": "review",
+          "settings": {
+            "author_name": "Erik Lindström",
+            "verified_buyer": true,
+            "review_date": "8 months ago",
+            "rating": 5,
+            "review_title": "Midnight Navy",
+            "review_text": "The Midnight variant is almost black, but with a deep navy depth that is stunning. The ceramic glaze is flawless. Highly recommended.",
+            "product_variant": "Living Essentials - Midnight",
+            "show_helpful": true,
+            "helpful_yes": 22,
+            "helpful_no": 0
+          }
+        },
+        "review_r3tzak": {
+          "type": "review",
+          "settings": {
+            "author_name": "Klara Svendsen",
+            "verified_buyer": true,
+            "review_date": "8 months ago",
+            "rating": 5,
+            "review_title": "Summer Archipelago",
+            "review_text": "The Summer Edit feels like a vacation in the archipelago. Light, airy fabrics and bright, clean accessories. Beautifully curated.",
+            "product_variant": "Seasonal Edit - Summer",
+            "show_helpful": true,
+            "helpful_yes": 10,
+            "helpful_no": 0
+          }
+        },
+        "review_xbtFQA": {
+          "type": "review",
+          "settings": {
+            "author_name": "Viggo Holm",
+            "verified_buyer": true,
+            "review_date": "9 months ago",
+            "rating": 5,
+            "review_title": "Bronze Beauty",
+            "review_text": "The bronze details in my home office are subtle but they add such a high-end feel. The weight and temperature of the metal are perfect.",
+            "product_variant": "Home Office - Bronze",
+            "show_helpful": true,
+            "helpful_yes": 17,
+            "helpful_no": 1
+          }
+        },
+        "review_bh7The": {
+          "type": "review",
+          "settings": {
+            "author_name": "Malin Arvidsson",
+            "verified_buyer": true,
+            "review_date": "9 months ago",
+            "rating": 5,
+            "review_title": "Marble Masterpiece",
+            "review_text": "The white marble with grey veining is exactly what I wanted for my kitchen. It stays cool and is incredibly easy to clean. 10/10.",
+            "product_variant": "Kitchen & Dining - Marble",
+            "show_helpful": true,
+            "helpful_yes": 13,
+            "helpful_no": 0
+          }
+        },
+        "review_NwcAiM": {
+          "type": "review",
+          "settings": {
+            "author_name": "Gustav Persson",
+            "verified_buyer": true,
+            "review_date": "10 months ago",
+            "rating": 5,
+            "review_title": "Leather Luxury",
+            "review_text": "The leather mat is so much better than those plastic ones. It feels premium under my hands and is the perfect surface for my laptop.",
+            "product_variant": "Home Office - Leather",
+            "show_helpful": true,
+            "helpful_yes": 28,
+            "helpful_no": 2
+          }
+        },
+        "review_WBA4Ug": {
+          "type": "review",
+          "settings": {
+            "author_name": "Ida Nyberg",
+            "verified_buyer": true,
+            "review_date": "10 months ago",
+            "rating": 5,
+            "review_title": "Pine Fresh",
+            "review_text": "The pine wood accessories bring a touch of the forest into my living room. The grain is beautiful and the light color is very modern.",
+            "product_variant": "Living Essentials - Pine",
+            "show_helpful": true,
+            "helpful_yes": 11,
+            "helpful_no": 0
+          }
+        },
+        "review_ChUgjE": {
+          "type": "review",
+          "settings": {
+            "author_name": "Markus Henriksen",
+            "verified_buyer": true,
+            "review_date": "11 months ago",
+            "rating": 5,
+            "review_title": "Silver Sophistication",
+            "review_text": "The silver accents in the living collection are so elegant. They aren't shiny or cheap-looking; they have a beautiful brushed finish.",
+            "product_variant": "Living Essentials - Silver",
+            "show_helpful": true,
+            "helpful_yes": 18,
+            "helpful_no": 0
+          }
+        },
+        "review_bQHE4C": {
+          "type": "review",
+          "settings": {
+            "author_name": "Tove Berg",
+            "verified_buyer": true,
+            "review_date": "11 months ago",
+            "rating": 5,
+            "review_title": "Silk Sanctuary",
+            "review_text": "The silk collection has turned my bedroom into a 5-star hotel room. The quality of the fabric is the best I've ever experienced.",
+            "product_variant": "Bedroom Retreat - Silk",
+            "show_helpful": true,
+            "helpful_yes": 37,
+            "helpful_no": 1
+          }
+        },
+        "review_yYJzgJ": {
+          "type": "review",
+          "settings": {
+            "author_name": "Erik Lindgren",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 5,
+            "review_title": "Iron and Stone",
+            "review_text": "The kitchen set is incredibly durable. After a year of daily use, it still looks as good as the day I bought it. Exceptional craftsmanship.",
+            "product_variant": "Kitchen & Dining - Iron",
+            "show_helpful": true,
+            "helpful_yes": 25,
+            "helpful_no": 0
+          }
+        },
+        "review_k9zdnp": {
+          "type": "review",
+          "settings": {
+            "author_name": "Klara Svendsen",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 4,
+            "review_title": "Great Quality",
+            "review_text": "Everything I’ve bought from Maison Luxe has been high quality. The clear glass items are my favorite—so simple and so beautiful.",
+            "product_variant": "Living Essentials - Clear",
+            "show_helpful": true,
+            "helpful_yes": 14,
+            "helpful_no": 1
+          }
+        },
+        "review_XPtx7T": {
+          "type": "review",
+          "settings": {
+            "author_name": "Viggo Holm",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 5,
+            "review_title": "Copper Kitchen",
+            "review_text": "The copper accents have aged beautifully. They have a slight patina now that makes them look even more expensive and authentic.",
+            "product_variant": "Kitchen & Dining - Copper",
+            "show_helpful": true,
+            "helpful_yes": 21,
+            "helpful_no": 0
+          }
+        },
+        "review_9L9wFr": {
+          "type": "review",
+          "settings": {
+            "author_name": "Malin Arvidsson",
+            "verified_buyer": true,
+            "review_date": "1 year ago",
+            "rating": 5,
+            "review_title": "Winter Magic",
+            "review_text": "The Winter Glow collection is the only way I get through the dark months. It creates such a beautiful atmosphere in our living room.",
+            "product_variant": "Seasonal Edit - Winter Glow",
+            "show_helpful": true,
+            "helpful_yes": 33,
+            "helpful_no": 2
+          }
+        }
+      },
+      "block_order": [
+        "review_dcnfyN",
+        "review_fQLMWH",
+        "review_zmX4aD",
+        "review_UPWqTX",
+        "review_JHGThT",
+        "review_haA7f4",
+        "review_CirW6A",
+        "review_8nm3PF",
+        "review_WTjnWc",
+        "review_wrQUjk",
+        "review_V6gK4N",
+        "review_DhMdnJ",
+        "review_6kcgzU",
+        "review_6LPUUD",
+        "review_cwXfam",
+        "review_gkwrV3",
+        "review_fGMcTK",
+        "review_Ap87Lf",
+        "review_zn6ead",
+        "review_jetiGf",
+        "review_8LC7Kz",
+        "review_RQzD7c",
+        "review_PmzHGC",
+        "review_B3h9L9",
+        "review_TyAyef",
+        "review_tMbVmL",
+        "review_iWTCDr",
+        "review_BdmPgK",
+        "review_6UdBTr",
+        "review_mkdQkM",
+        "review_pVrqKw",
+        "review_9aBpet",
+        "review_TeyMJj",
+        "review_qxxJJB",
+        "review_HUii9X",
+        "review_jR8mHr",
+        "review_TeGTXk",
+        "review_AtMEPw",
+        "review_iUgpgk",
+        "review_qz3WbY",
+        "review_VpBYUp",
+        "review_UM8dw4",
+        "review_tdCFc4",
+        "review_mfPRWf",
+        "review_8pYk7W",
+        "review_MJbmTg",
+        "review_ADmC7c",
+        "review_bNzrJQ",
+        "review_NkJPbM",
+        "review_Y9PR9g",
+        "review_HA9wi4",
+        "review_TzkWHm",
+        "review_7gVCTL",
+        "review_G3wDzX",
+        "review_q4ndLF",
+        "review_EQakmw",
+        "review_pVxDRe",
+        "review_T4Tx3b",
+        "review_iitaYD",
+        "review_QYcA9D",
+        "review_C3jQqn",
+        "review_RNKa3M",
+        "review_VKgB9B",
+        "review_hWxXgz",
+        "review_wcphG7",
+        "review_LQq8E6",
+        "review_wHTmFe",
+        "review_chzyG3",
+        "review_YLLr7P",
+        "review_eV6NaH",
+        "review_PANd9p",
+        "review_xznYC7",
+        "review_Ez3Bpa",
+        "review_qFQge3",
+        "review_TrBVcg",
+        "review_d8knND",
+        "review_BcdEzc",
+        "review_VJYMN6",
+        "review_Qmnrtm",
+        "review_tjMPBi",
+        "review_FAFgTE",
+        "review_agQia9",
+        "review_Mi6xnJ",
+        "review_jG4dGn",
+        "review_3b9mWf",
+        "review_nx8M7p",
+        "review_wFDTyN",
+        "review_YGV9ML",
+        "review_TKU7Pr",
+        "review_7DTtjr",
+        "review_YmKL8Y",
+        "review_a4NQUY",
+        "review_qAEeCU",
+        "review_JQcdAr",
+        "review_DFwgrG",
+        "review_GbnmmY",
+        "review_ckG3Hx",
+        "review_r3tzak",
+        "review_xbtFQA",
+        "review_bh7The",
+        "review_NwcAiM",
+        "review_WBA4Ug",
+        "review_ChUgjE",
+        "review_bQHE4C",
+        "review_yYJzgJ",
+        "review_k9zdnp",
+        "review_XPtx7T",
+        "review_9L9wFr"
+      ],
+      "name": "Product Reviews",
+      "settings": {
+        "show_heading": true,
+        "heading": "Customer Reviews",
+        "average_rating": "4.6",
+        "total_reviews": 42,
+        "star_5": 75,
+        "star_4": 15,
+        "star_3": 5,
+        "star_2": 3,
+        "star_1": 2,
+        "show_write_review": true,
+        "write_review_text": "WRITE A REVIEW",
+        "show_media_filter": true,
+        "show_load_more": true,
+        "load_more_text": "Load More Reviews",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_details_grid_brQ3nY",
+    "collection_based_image_zy6yjU",
+    "product_features_bar_T6JjR9",
+    "worn_by_you_ckarLa",
+    "faq_section_zFaY4d",
+    "related-products",
+    "product_reviews_qLhKdN"
+  ]
+}

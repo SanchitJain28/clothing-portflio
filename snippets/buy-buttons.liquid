@@ -1,0 +1,158 @@
+{% comment %}
+  Renders product buy-buttons with integrated Quantity Selector.
+{% endcomment %}
+
+{%- comment -%} CRITICAL: Define the form ID so JS can target it! {%- endcomment -%}
+{%- assign product_form_id = 'product-form-' | append: section.id -%}
+
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+
+<div {{ block.shopify_attributes }}>
+  {%- if product != blank -%}
+    {%- liquid
+      assign gift_card_recipient_feature_active = false
+      if block.settings.show_gift_card_recipient and product.gift_card?
+        assign gift_card_recipient_feature_active = true
+      endif
+
+      assign show_dynamic_checkout = false
+      if block.settings.show_dynamic_checkout and gift_card_recipient_feature_active == false
+        assign show_dynamic_checkout = true
+      endif
+    -%}
+
+    <product-form
+      class="product-form"
+      data-hide-errors="{{ gift_card_recipient_feature_active }}"
+      data-section-id="{{ section.id }}">
+      <div
+        class="product-form__error-message-wrapper"
+        role="alert"
+        hidden>
+        <span class="svg-wrapper">
+          {{- 'icon-error.svg' | inline_asset_content -}}
+        </span>
+        <span class="product-form__error-message"></span>
+      </div>
+
+      {%- form 'product'
+        , product
+        , id: product_form_id
+        , class: 'form'
+        , novalidate: 'novalidate'
+        , data-type: 'add-to-cart-form'
+      -%}
+
+        <!-- FIXED: Removed hardcoded disabled attribute if product is available -->
+        <input
+          type="hidden"
+          name="id"
+          value="{{ product.selected_or_first_available_variant.id }}"
+          {% if product.selected_or_first_available_variant.available == false %}
+          disabled{% endif %}
+          class="product-variant-id">
+
+        {%- if gift_card_recipient_feature_active -%}
+          {%- render 'gift-card-recipient-form'
+            , product: product
+            , form: form
+            , section: section -%}
+        {%- endif -%}
+
+        <!-- CONTAINER FOR QUANTITY + ADD TO CART -->
+        <div class="product-form__buttons flex-buttons-row">
+
+          <!-- INTEGRATED QUANTITY SELECTOR -->
+          <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
+            <quantity-input class="quantity">
+              <button
+                class="quantity__button no-js-hidden"
+                name="minus"
+                type="button">
+                <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+                <!-- Minus Icon -->
+                <svg
+                  width="12"
+                  height="2"
+                  viewBox="0 0 12 2"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"><path
+                    d="M0 1H12"
+                    stroke="currentColor"
+                    stroke-width="2" /></svg>
+              </button>
+
+              <input
+                class="quantity__input"
+                type="number"
+                name="quantity"
+                id="Quantity-{{ section.id }}"
+                min="1"
+                value="1"
+                form="{{ product_form_id }}">
+
+              <button
+                class="quantity__button no-js-hidden"
+                name="plus"
+                type="button">
+                <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+                <!-- Plus Icon -->
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"><path
+                    d="M6 0V12M0 6H12"
+                    stroke="currentColor"
+                    stroke-width="2" /></svg>
+              </button>
+            </quantity-input>
+          </div>
+
+          <!-- ADD TO CART BUTTON -->
+          {%- liquid
+            assign check_against_inventory = true
+            if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
+              assign check_against_inventory = false
+            endif
+            if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+              assign quantity_rule_soldout = true
+            endif
+          -%}
+
+          <!-- FIXED: Changed section_id to section.id -->
+          <button
+            id="ProductSubmitButton-{{ section.id }}"
+            type="submit"
+            name="add"
+            class="product-form__submit button button--full-width custom-add-to-cart"
+            {% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+            disabled
+            {% endif %}>
+            <span>
+              {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                {{ 'products.product.sold_out' | t }}
+              {%- else -%}
+                ADD TO CART
+              {%- endif -%}
+            </span>
+            {%- render 'loading-spinner' -%}
+          </button>
+        </div>
+      {%- endform -%}
+    </product-form>
+  {%- else -%}
+    <div class="product-form">
+      <div class="product-form__buttons form">
+        <button
+          type="submit"
+          name="add"
+          class="product-form__submit button button--full-width button--primary"
+          disabled>
+          {{ 'products.product.sold_out' | t }}
+        </button>
+      </div>
+    </div>
+  {%- endif -%}
+</div>

@@ -1,0 +1,77 @@
+/* Press Logos Section Styling */
+.press-section {
+  padding: 3rem 0;
+  background-color: #ffffff;
+  width: 100%;
+  overflow: hidden; /* Hides overflow for carousel effect */
+  position: relative;
+  text-align: center;
+}
+
+/* Heading */
+.press-heading {
+  font-family: inherit; /* Uses theme font */
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 2.5rem 0; /* Space between heading and logos */
+}
+
+/* Logo Container */
+.press-container {
+  display: flex;
+  flex-wrap: nowrap; /* Forces single row */
+  align-items: center; /* Vertically center logos */
+  justify-content: flex-start; /* Start from left for animation */
+  gap: 5rem; /* Wide gap between logos */
+  width: max-content; /* Allow width to expand */
+  padding: 0 2rem;
+  will-change: transform;
+}
+
+/* Individual Logo styling */
+.press-logo-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.press-logo-img {
+  display: block;
+  height: 32px; /* Fixed height to match the sleek look of the image */
+  width: auto;
+  max-width: 180px; /* Prevent overly wide logos */
+  object-fit: contain;
+  /* Optional: Add a grayscale filter if you want them all black/white 
+     filter: grayscale(100%); 
+     opacity: 0.8; 
+  */
+  transition: opacity 0.3s ease;
+}
+
+.press-logo-img:hover {
+  opacity: 1;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .press-section {
+    padding: 2rem 0;
+  }
+  
+  .press-heading {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .press-container {
+    gap: 3.5rem; /* Slightly smaller gap on mobile */
+  }
+  
+  .press-logo-img {
+    height: 28px; /* Slightly smaller logos on mobile */
+  }
+}

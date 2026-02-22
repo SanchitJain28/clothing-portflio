@@ -1,0 +1,76 @@
+{% comment %}
+  Renders related products carousel in cart drawer
+  Usage:
+  {% render 'cart-related-products', collection_handle: 'collection-handle' %}
+{% endcomment %}
+
+{%- assign collection_handle = collection_handle | default: 'all' -%}
+{%- assign related_collection = collections[collection_handle] -%}
+
+{%- if related_collection.products.size > 0 -%}
+  <cart-related-products>
+    <div class="cart-related-products">
+      <div class="cart-related-products__header">
+        <h3 class="cart-related-products__title">You May Also Like</h3>
+        <div class="cart-related-products__nav">
+          <button
+            type="button"
+            class="cart-related-products__nav-btn cart-related-products__nav-btn--prev"
+            aria-label="Previous">
+            <span class="svg-wrapper">
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
+          </button>
+          <button
+            type="button"
+            class="cart-related-products__nav-btn cart-related-products__nav-btn--next"
+            aria-label="Next">
+            <span class="svg-wrapper">
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="cart-related-products__carousel">
+        <div class="cart-related-products__track">
+          {%- for product in related_collection.products limit: 8 -%}
+            <div class="cart-related-product">
+              <a href="{{ product.url }}" class="cart-related-product__link">
+                <div class="cart-related-product__image-wrapper">
+                  {%- if product.featured_image -%}
+                    <img
+                      src="{{ product.featured_image | image_url: width: 300 }}"
+                      alt="{{ product.featured_image.alt | escape }}"
+                      loading="lazy"
+                      class="cart-related-product__image"
+                      width="300"
+                      height="300">
+                  {%- endif -%}
+                </div>
+                <div class="cart-related-product__info">
+                  <h4 class="cart-related-product__title">{{ product.title }}</h4>
+                  <div class="cart-related-product__price">
+                    {%- if product.compare_at_price > product.price -%}
+                      <span class="cart-related-product__price--sale">{{ product.price | money }}</span>
+                      <span class="cart-related-product__price--compare">{{ product.compare_at_price | money }}</span>
+                    {%- else -%}
+                      <span class="cart-related-product__price--regular">{{ product.price | money }}</span>
+                    {%- endif -%}
+                  </div>
+                </div>
+              </a>
+              <button
+                type="button"
+                class="cart-related-product__add-btn"
+                data-product-id="{{ product.variants.first.id }}"
+                aria-label="Add {{ product.title }} to cart">
+                Add
+              </button>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </cart-related-products>
+{%- endif -%}

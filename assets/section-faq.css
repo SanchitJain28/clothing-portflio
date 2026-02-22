@@ -1,0 +1,104 @@
+/* Section Container */
+.flexform-faq-section {
+  padding: 4rem 2rem;
+  max-width: 1350px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+/* Heading styling */
+.flexform-faq-title {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 3rem;
+  font-family: 'Inter', sans-serif; /* Assuming you have this font loaded */
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+/* Container for the list */
+.flexform-faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; /* Gap between gray bars */
+}
+
+/* The Question Button (The Gray Bar) */
+.faq-trigger {
+      width: 100%;
+    text-align: left;
+    background-color: #f7f7f7;
+    border: none;
+    padding: 10px 10px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color .3s ease,color .3s ease;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: inherit;
+}
+
+.faq-trigger:hover {
+  background-color: #eeeeee;
+}
+
+/* Active State styling for the button */
+.faq-trigger.active {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* The "Q:" prefix styling */
+.faq-q-prefix {
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+/* The Answer Content (Hidden by default) */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  background-color: #ffffff;
+  padding: 0 2.5rem;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+/* Open state for content */
+.faq-content.open {
+  padding: 1.5rem 2.5rem 2rem 2.5rem; /* Add padding when open */
+  opacity: 1;
+  border-left: 2px solid #1a1a1a; /* Visual accent when open */
+  margin-left: 4px;
+}
+
+.faq-answer-text {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .flexform-faq-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .flexform-faq-title {
+    font-size: 2.4rem;
+  }
+
+  .faq-trigger {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+  }
+}

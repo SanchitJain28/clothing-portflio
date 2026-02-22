@@ -1,0 +1,56 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "moving_promo_banner_3qKnDk": {
+      "type": "moving-promo-banner",
+      "name": "GSAP Marquee Banner",
+      "settings": {
+        "text": "FLAT 10% OFF ON YOUR 1ST ORDER. USE CODE: GETACTIVE.                FLAT 10% OFF ON YOUR 1ST ORDER. USE CODE: GETACTIVE",
+        "link": "",
+        "bg_color": "#000000",
+        "text_color": "#ffffff",
+        "font_size": 14,
+        "font_weight": "bold",
+        "padding_y": 26,
+        "gap_width": 50,
+        "speed": 100,
+        "direction": "left",
+        "pause_on_hover": true
+      }
+    },
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "color_scheme": "scheme-1",
+        "show_line_separator": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "menu": "main-menu",
+        "color_scheme": "scheme-1"
+      }
+    }
+  },
+  "order": [
+    "moving_promo_banner_3qKnDk",
+    "announcement-bar",
+    "header"
+  ]
+}
