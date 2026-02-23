@@ -1,0 +1,94 @@
+/* ========================================================
+   CUSTOM VARIANT STYLES (FLEXFORM ATHLETICS AESTHETIC)
+======================================================== */
+
+/* --- GENERAL WRAPPERS & LABELS --- */
+variant-selects .product-form__input {
+  border: none;
+  margin: 0 0 24px 0;
+  padding: 0;
+}
+
+variant-selects .form__label {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px; /* Matched the larger heading size from image */
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between "Size:" and "XXS" */
+}
+
+/* Selected value text next to label (e.g., Size: XXS) */
+variant-selects .form__label [data-selected-value] {
+  font-weight: 700; /* Matched bold weight from image */
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+/* Hide native radio inputs visually but keep for accessibility */
+.product-form__input input[type="radio"] {
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  position: absolute;
+  height: 1px;
+  width: 1px;
+}
+
+/* --- PILLS / BUTTONS (Sizes) --- */
+.product-form__input--pill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Tighter gap matching the image */
+}
+
+.product-form__input--pill label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px; /* Ensures square-ish look for single letters like S, M, L */
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid #a3a3a3; /* Distinct grey border */
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 800; /* Extra bold text matching the image */
+  border-radius: 4px; /* Slight rounding */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Selected State (Black Box) */
+.product-form__input--pill input[type="radio"]:checked + label {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+/* Hover State */
+.product-form__input--pill input[type="radio"]:not(:checked):not(.disabled) + label:hover {
+  border-color: #000000;
+}
+
+/* Disabled / Sold Out State (Grey text with diagonal line) */
+.product-form__input--pill input[type="radio"].disabled + label {
+  color: #888888;
+  border-color: #a3a3a3;
+  cursor: not-allowed;
+  
+  /* Creates the perfect top-left to bottom-right strikethrough line */
+  background: linear-gradient(
+    to bottom right, 
+    rgba(0,0,0,0) calc(50% - 1px), 
+    #888888 calc(50% - 1px), 
+    #888888 calc(50% + 1px), 
+    rgba(0,0,0,0) calc(50% + 1px)
+  );
+}
+
